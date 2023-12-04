@@ -1,4 +1,5 @@
 usabilty testing
+usabilty testing
 초기에 usabilty 테스트해야함
 accuracy
 시험범위.
