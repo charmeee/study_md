@@ -30,7 +30,14 @@
 - 물리적  구현이 아님
 	- 카탈로그에 SELECT-FROM- WHERE로 저장
 - 뷰에 대한 내용변경 -> 테이블에 대한 변경
-
+- 장점
+	- 논리적 독립성을 제공
+	- 데이터 접근을 제어
+	- 사용자의 데이터 관리를 단순화
+	- 여러 사용자에 다양한 데이터 요구를 지원
+- 단점
+	- 정의 변경 불간
+	- 삽입, 삭제, 갱신연산에 제약이 많음
 ### 데이터 타입
 - 숫자
 	- 정수 : INT , SMALLINT
@@ -148,7 +155,7 @@ CREATE VIEW CSTUDENT(Sno, Sname, Year)
 ```
 - WITH CHECK OPTION : 뷰를 통해 데이터를 변경시 뷰의 정의를 만족하는지 확인하는 옵션이다
 - 뷰는 제한적인 갱신만 가능
-##### 삽입 삭제 갱신이 가능한 경우
+##### 변경(삽입,삭제,갱신) 가능
 ```sql
 %% 열부분 집합뷰 %%
 - 기본키를 포함한경우 (Sno)
@@ -157,7 +164,7 @@ CREATE VIEW STUDENT_VIEW1 AS SELECT Sno, Dept FROM STUDENT;
 %% 행부분 집합뷰 , 당연히 기본키가 포함됨 %% 
 CREATE VIEW STUDENT_VIEW3 AS SELECT Sno, Sname, Year, Dept FROM STUDEN
 ```
-##### 삽입 삭제 갱신 불가
+##### 변경(삽입,삭제,갱신) 불가
 ```sql
 %% 열부분 집합뷰 %%
 - 기본키를 포함하지 않은경우
@@ -173,12 +180,20 @@ CREATE VIEW HONOR(Sname, Dept, Grade)
 	WHERE STUDENT.Sno = ENROL.Sno -- 조인기준
 		AND ENROL.Final > 95;
 	
-%% 통계적 요약 뷰 %%
+%% 통계적 요약 뷰, 데이터가 변형되서 들어갓을 경우 %%
+-- 집계함수 사용
 CREATE VIEW COSTAT(Cno, Avpoint) 
-	AS SELECT Cno, AVG(Midterm) --집계함수 사용
+	AS SELECT Cno, AVG(Midterm)
 	FROM ENROL GROUP BY Cno; 
+	
+--열이 상수나 산술 연산자 또는 함수가 사용된 산술식
+CREATE VIEW Employee_Annual_Salary AS
+SELECT EmployeeID, FirstName, LastName, Salary * 12 AS AnnualSalary
+FROM Employees;
 
-%% + 변경할수 없는 뷰를 기초로 정의 됐을때ㅔ %%
+
+%% 변경할수 없는 뷰를 기초로 정의 됐을때 %%
+%%  %%
 ```
 ### 수정 삭제 DROP ALTER
 #### 테이블,스키마 삭제
@@ -331,3 +346,36 @@ DELETE FROM 테이블 [WHERE 조건];
 >DB 관리 및 통제
 >DB 백업/복원
 >사용자 등록, 권한 관리
+
+
+## 삽입(내장) SQL
+- sql의 이중모드 원리
+	- 대화식 환경(터미널)이나 응용프로그램에 내장될 수 있음
+- 삽입 sql을 포함하는 응용프로그램 특징
+	- 명령문앞에 EXEC SQL QNXDLA
+	- 호스트 실행문이 나타나는 어느곳이든 사용 
+	- 호스트 변수는 : 앞에 붙임
+		- ```int id = 12345; 
+		  EXEC SQL DELETE FROM Employees WHERE EmployeeID = :id;```
+- 호스트 변수 SQLSTATE를 포함 : SQL문장의 실행 상태를 나타냄
+	- 00000 : 성공적으로 실행
+	- 아니면 경고 or 에러
+- 호스트 변수와 대응하는 열의 데이터 타입은 일치 : SQL 문장에 사용되는 호스트 변수의 데이터 타입과 해당 변수가 대응하는 데이터베이스 테이블의 열의 데이터 타입은 일치해야 합니다.
+#### cursor
+그냥 프로그램에서 중간결과값을 저장하는 것
+```sql
+EXEC SQL DECLARE C1 CURSOR FOR /*커서 C1의 정의*/ 
+	SELECT Sno, Sname, Year 
+	FROM STUDENT
+	 WHERE Dept = :dept; 
+EXEC SQL OPEN C1; /*질의문의 실행*/ 
+	DO /* C1으로 접근되는 모든 레코드에 대해 */ 
+		EXEC SQL FETCH C1 INTO :sno,:sname,:year; /*다음 레코드를 채취*/ . . . . . . END; 
+EXEC SQL CLOSE C1; /*커서 c1의 활동 종료 *
+```
+
+#### Dynamic sql
+- PREPARE
+	- sql문을 예비 컴파일해서 object code로 생성하여 저장
+- EXECUTE
+	- 저장되어있는 object code를 실행
