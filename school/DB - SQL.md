@@ -55,23 +55,51 @@
 
 ### 생성 CREATE
 #### 기본 테이블 생성
+중괄호는하나무적건잇어야함 대괄호는 생략가능 + 여러번반복될수잇다. * 전체를 선택하는기호
 ```sql
 CREATE TABLE 테이블이름(
-	{열이름 데이타타입  NOT NULL  DEFAULT 값,}
 	PRIMARY KEY (열이름_리스트), 
 	{UNIQUE (열이름_리스트),} 
+
+	{열이름 데이타타입  NOT NULL  DEFAULT 값,}
 	{FOREIGN KEY(열이름_리스트) REFERENCES 기본테이블(열이름_리스트) 
 		ON DELETE 옵션 ON UPDATE 옵션,]} 
 	CONSTRAINT 이름 CHECK(조건식)
 );
 ```
-- unique : 후보키
-- not null : 속성 값 제약조건
+- PRIMARY KEY : 기본키와 제약조건을 명세
+	- UNIQUE,NOT NULL속성을 가지고 있음
+- UNIQUE : 후보키(유일성,최소성 확보된 키)
+- NOT NULL : 속성 값 제약조건
 - CASCADE : 자신이 참조하고 있는 테이블의 데이터가 삭제되면 자동으로 자신의 데이터도 삭제
 	- 참조 무결성 준수 가능
-- CONSTRAINT : 제약
+- CONSTRAINT : 제약조건에 이름을 붙이는 것
+
 - CHECK : 조건을 주어 해당 데이터 입력 불가능
-##### example
+	- CHECK(조건)
+#### CONSTRAINT 사용이유
+##### CONSTRAINT 사용 경우
+```sql
+CREATE TABLE Employees (
+    emp_id INT,
+    name VARCHAR(50),
+    salary FLOAT,
+    CONSTRAINT check_salary CHECK (salary > 0)
+);
+```
+제약조건만 드랍하고 수정이 가능함
+```sql
+ALTER TABLE Employees 
+DROP CONSTRAINT check_salary;
+
+ALTER TABLE Employees
+ADD CONSTRAINT check_salary CHECK (salary >= 50000);
+```
+##### 사용하지 않는 경우
+
+  
+
+#### example
 ```sql
 CREATE TABLE ENROL (
 	%% 속성들 정의 %%
