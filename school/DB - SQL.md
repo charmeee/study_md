@@ -133,10 +133,20 @@ CREATE TABLE ENROL (
 	FOREIGN KEY(Sno) REFERENCES STUDENT(sno) ON DELETE CASCADE ON UPDATE CASCADE, 
 	FOREIGN KEY(Cno) REFERENCES COURSE ON DELETE CASCADE ON UPDATE CASCADE, 
 	-- 제약조건 
-	CHECK(Grade ³ 0 AND Grade £ 100));
+	CHECK(Grade >0 AND Grade <100));
 ```
 #### 뷰생성
+```sql
+CREATE VIEW 뷰_이름[(열_이름 리스트)] 
+	AS SELECT문 [WITH CHECK OPTION]
 
+CREATE VIEW CSTUDENT(Sno, Sname, Year)
+	AS SELECT Sno, Sname, Year 
+		FROM STUDENT
+		WHERE Dept = '컴퓨터’
+		WITH CHECK OPTION;
+```
+- WITH CHECK OPTION : 뷰를 통해 데이터를 변경시 뷰의 정의를 만족하는지 확인하는 옵션이다.
 ### 수정 삭제 DROP ALTER
 #### 테이블,스키마 삭제
 ```SQL
@@ -168,6 +178,7 @@ SELECT [ALL | DISTINCT] 속성
 ```
 
 #### JOIN을 이용한 검색
+> 가로로 합침
 ```sql
 SELECT Sname, Dept, Grade 
 	FROM STUDENT 
@@ -192,6 +203,17 @@ SELECT Sname, Dept, Grade
 - https://doh-an.tistory.com/30
 
 #### UNION을 이용한 검색
+>새로로 합침
+>UNION : 중복되는 투플제거 , UNION ALL : 중복되는 투플 제거 ㄴㄴ
+>속성이 같아야 함
+
+```sql
+SELECT Sno FROM STUDENT WHERE Year = 1 
+UNION 
+SELECT Sno FROM ENROL WHERE Cno = 'C324';
+```
+
+
 #### 집계함수 
 - COUNT, SUM, AVG, MAX, MIN
 - 집계함수(속성) 형식
@@ -240,7 +262,37 @@ SELECT Sname FROM STUDENT WHERE EXISTS
 	(SELECT * FROM ENROL WHERE Sno = STUDENT.Sno AND Cno = 'C413');
 ```
 
-### 갱신 UPDATE & 삽입 INSERT
+### 갱신 UPDATE
+```sql
+UPDATE 테이블 SET { 열_이름 = 산술식} ’+ [WHERE 조건];
+```
+
+```sql
+UPDATE STUDENT SET Year = 2 WHERE Sno = 300;
+UPDATE COURSE SET Credit = Credit + 1 WHERE Dept = '컴퓨터';
+```
+
+SET 뒤나 WHERE뒤에 부속질의어를 써도 된다
+단 SET에는 부속질의어가 하나의 값만 반환하도록 해야한다.
+### 삽입 INSERT
+```sql
+INSERT INTO STUDENT(Sno, Sname, Year, Dept) 
+VALUES (600, '박상철', 1, '컴퓨터'); 
+--전부다 넣을땐 생략가능 단 순서대로..
+INSERT INTO STUDENT VALUES (600, '박상철', 1, '컴퓨터');
+```
+#### 부속 질의문
+value 부분에 넣을수있음.
+```sql
+INSERT INTO COMPUTER(Sno, Sname, Year) 
+SELECT Sno, Sname, Year FROM STUDENT WHERE Dept = '컴퓨터';
+```
+### 삭제 DELETE
+```sql
+--조건안붙이면 레코드가 다 삭제됨
+DELETE FROM 테이블 [WHERE 조건];
+```
+레코드를 삭제할때 부속질의문 쓰는 방식은 SELECT랑같음
 
 ## 데이터 제어어(DCL)
 >DB 관리 및 통제
