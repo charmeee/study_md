@@ -53,28 +53,21 @@
 > DB 구조 정의
 > DB 객체(table, view, index etc) 생성, 수정, 삭제
 
-### 생성 CREATE
-#### 기본 테이블 생성
-중괄호는하나무적건잇어야함 대괄호는 생략가능 + 여러번반복될수잇다. * 전체를 선택하는기호
-```sql
-CREATE TABLE 테이블이름(
-	PRIMARY KEY (열이름_리스트), 
-	{UNIQUE (열이름_리스트),} 
-
-	{열이름 데이타타입  NOT NULL  DEFAULT 값,}
-	{FOREIGN KEY(열이름_리스트) REFERENCES 기본테이블(열이름_리스트) 
-		ON DELETE 옵션 ON UPDATE 옵션,]} 
-	CONSTRAINT 이름 CHECK(조건식)
-);
-```
+### 제약 조건들
 - PRIMARY KEY : 기본키와 제약조건을 명세
 	- UNIQUE,NOT NULL속성을 가지고 있음
+- FOREIGN KEY
+	- ON DELETE
+	- ON UPDATE
+		- CASCADE , SET NULL, NO ACTION, SET DEFAULT, RESTRICT의 옵션 잇음
 - UNIQUE : 후보키(유일성,최소성 확보된 키)
-- NOT NULL : 속성 값 제약조건
-- CASCADE : 자신이 참조하고 있는 테이블의 데이터가 삭제되면 자동으로 자신의 데이터도 삭제
-	- 참조 무결성 준수 가능
+- NOT NULL : 속성 값 제약조건 눌이 될 수 없다
+- 삭제될때에 관한조건(기본이 RESTRICT)
+	- RESTRICT : 참조하는 테이블에 데이터가 남아 있으면 참조되는 테이블의 데이터를 삭제하거나 수정할 수 없음
+	- CASCADE : 자신이 참조하고 있는 테이블의 데이터가 삭제되면 자동으로 자신의 데이터도 삭제
+		- 참조 무결성 준수 가능
 - CONSTRAINT : 제약조건에 이름을 붙이는 것
-
+- DEFAULT : 디폴트값지정
 - CHECK : 조건을 주어 해당 데이터 입력 불가능
 	- CHECK(조건)
 #### CONSTRAINT 사용이유
@@ -89,35 +82,85 @@ CREATE TABLE Employees (
 ```
 제약조건만 드랍하고 수정이 가능함
 ```sql
+-- alter 는 테이블 컬럼을 수정할 때 쓰는 키워드
 ALTER TABLE Employees 
-DROP CONSTRAINT check_salary;
+	DROP CONSTRAINT check_salary;
 
 ALTER TABLE Employees
-ADD CONSTRAINT check_salary CHECK (salary >= 50000);
+	ADD CONSTRAINT check_salary CHECK (salary >= 50000);
 ```
 ##### 사용하지 않는 경우
+```sql
+CREATE TABLE Employees (
+    emp_id INT,
+    name VARCHAR(50),
+    salary FLOAT CHECK (salary > 0)
+);
+```
+salary속성 자체를  없애고 다시만들어야함
+```sql
+ALTER TABLE Employees
+	DROP COLUMN salary;
 
-  
+ALTER TABLE Employees
+	ADD COLUMN salary FLOAT CHECK (salary >= 50000);
+```
 
-#### example
+### 생성 CREATE
+#### 기본 테이블 생성
+중괄호는하나무적건잇어야함 대괄호는 생략가능 + 여러번반복될수잇다. * 전체를 선택하는기호
+```sql
+CREATE TABLE 테이블이름(
+	{열이름 데이타타입  NOT NULL  DEFAULT 디폴트값,}
+	[PRIMARY KEY (열이름_리스트),] 
+	{[UNIQUE (열이름_리스트),]} *
+	{[FOREIGN KEY(열이름_리스트) REFERENCES 기본테이블(열이름_리스트) ]
+		[ON DELETE 옵션 ] [ON UPDATE 옵션,]} 
+	[CONSTRAINT 이름] [CHECK(조건식)]
+);
+```
+#### Example
 ```sql
 CREATE TABLE ENROL (
-	%% 속성들 정의 %%
+	-- 속성들 정의
 	Sno INTEGER NOT NULL, 
 	Cno CHAR(6) NOT NULL, 
 	Grade INTEGER, 
-	%% PK정의 %%
+	-- PK정의 
 	PRIMARY KEY(Sno,Cno), 
-	%% FK정의 %%
+	-- FK정의 
 	FOREIGN KEY(Sno) REFERENCES STUDENT(sno) ON DELETE CASCADE ON UPDATE CASCADE, 
 	FOREIGN KEY(Cno) REFERENCES COURSE ON DELETE CASCADE ON UPDATE CASCADE, 
-	%% 제약조건 %%
+	-- 제약조건 
 	CHECK(Grade ³ 0 AND Grade £ 100));
 ```
 
+
+### 수정 삭제 DROP ALTER
+#### 테이블,스키마 삭제
+```SQL
+DROP TABLE 테이블 이름 [조건]
+DROP SCHEMA 스키마 이름 [조건]
+```
+
+#### 테이블 수정
+```sql
+ALTER TABLE 테이블이름 
+	DROP 열이름 [조건]
+	ADD 열이름 데이터타입 [DEFAULT 디폴트값] 
+```
 ## 데이터 조작어(DML)
 >DB 데이터 관리
 >입력 수정 삭제, 검색
+
+### 검색 SELECT
+```sql
+--[]시 먼저 나오는게 디폴트 값
+SELECT [ALL | DISTINCT] 열_리스트 
+	FROM 테이블_리스트 [WHERE 조건]
+	[GROUP BY 열_리스트 [HAVING 조건]]
+	[ORDER BY 열_리스트 [ASC | DESC]];
+```
 
 ## 데이터 제어어(DCL)
 >DB 관리 및 통제
