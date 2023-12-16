@@ -146,7 +146,40 @@ CREATE VIEW CSTUDENT(Sno, Sname, Year)
 		WHERE Dept = '컴퓨터’
 		WITH CHECK OPTION;
 ```
-- WITH CHECK OPTION : 뷰를 통해 데이터를 변경시 뷰의 정의를 만족하는지 확인하는 옵션이다.
+- WITH CHECK OPTION : 뷰를 통해 데이터를 변경시 뷰의 정의를 만족하는지 확인하는 옵션이다
+- 뷰는 제한적인 갱신만 가능
+##### 삽입 삭제 갱신이 가능한 경우
+```sql
+%% 열부분 집합뷰 %%
+- 기본키를 포함한경우 (Sno)
+CREATE VIEW STUDENT_VIEW1 AS SELECT Sno, Dept FROM STUDENT;
+
+%% 행부분 집합뷰 , 당연히 기본키가 포함됨 %% 
+CREATE VIEW STUDENT_VIEW3 AS SELECT Sno, Sname, Year, Dept FROM STUDEN
+```
+##### 삽입 삭제 갱신 불가
+```sql
+%% 열부분 집합뷰 %%
+- 기본키를 포함하지 않은경우
+CREATE VIEW STUDENT_VIEW2 AS SELECT Sname, Dept FROM STUDENT;
+
+%% 조인뷰(두개의 테이블 이상이 관련되서 정의된 경우) %%
+- 조인이 있는 경우
+CREATE VIEW STUDENT_VIEW2 AS SELECT Sname, Dept FROM STUDENT;
+- 조인이 없는 경우
+CREATE VIEW HONOR(Sname, Dept, Grade) 
+	AS SELECT STUDENT.Sname, STUDENT.Dept, ENROL.Final -- 조인 
+	FROM STUDENT, ENROL 
+	WHERE STUDENT.Sno = ENROL.Sno -- 조인기준
+		AND ENROL.Final > 95;
+	
+%% 통계적 요약 뷰 %%
+CREATE VIEW COSTAT(Cno, Avpoint) 
+	AS SELECT Cno, AVG(Midterm) --집계함수 사용
+	FROM ENROL GROUP BY Cno; 
+
+%% + 변경할수 없는 뷰를 기초로 정의 됐을때ㅔ %%
+```
 ### 수정 삭제 DROP ALTER
 #### 테이블,스키마 삭제
 ```SQL
