@@ -53,7 +53,9 @@
 > DB 구조 정의
 > DB 객체(table, view, index etc) 생성, 수정, 삭제
 
-### 제약 조건들
+
+### 생성 CREATE
+#### 제약 조건들
 - PRIMARY KEY : 기본키와 제약조건을 명세
 	- UNIQUE,NOT NULL속성을 가지고 있음
 - FOREIGN KEY
@@ -70,43 +72,42 @@
 - DEFAULT : 디폴트값지정
 - CHECK : 조건을 주어 해당 데이터 입력 불가능
 	- CHECK(조건)
-#### CONSTRAINT 사용이유
-##### CONSTRAINT 사용 경우
-```sql
-CREATE TABLE Employees (
-    emp_id INT,
-    name VARCHAR(50),
-    salary FLOAT,
-    CONSTRAINT check_salary CHECK (salary > 0)
-);
+##### CONSTRAINT 사용이유
+-  CONSTRAINT 사용 경우
+	```sql
+	CREATE TABLE Employees (
+	    emp_id INT,
+	    name VARCHAR(50),
+	    salary FLOAT,
+	    CONSTRAINT check_salary CHECK (salary > 0)
+	);
+	```
+	제약조건만 드랍하고 수정이 가능함
+	```sql
+	-- alter 는 테이블 컬럼을 수정할 때 쓰는 키워드
+	ALTER TABLE Employees 
+		DROP CONSTRAINT check_salary;
+	
+	ALTER TABLE Employees
+		ADD CONSTRAINT check_salary CHECK (salary >= 50000);
 ```
-제약조건만 드랍하고 수정이 가능함
-```sql
--- alter 는 테이블 컬럼을 수정할 때 쓰는 키워드
-ALTER TABLE Employees 
-	DROP CONSTRAINT check_salary;
+- 사용하지 않는 경우
+	```sql
+	CREATE TABLE Employees (
+	    emp_id INT,
+	    name VARCHAR(50),
+	    salary FLOAT CHECK (salary > 0)
+	);
+	```
+	salary속성 자체를  없애고 다시만들어야함
+	```sql
+	ALTER TABLE Employees
+		DROP COLUMN salary;
+	
+	ALTER TABLE Employees
+		ADD COLUMN salary FLOAT CHECK (salary >= 50000);
+```
 
-ALTER TABLE Employees
-	ADD CONSTRAINT check_salary CHECK (salary >= 50000);
-```
-##### 사용하지 않는 경우
-```sql
-CREATE TABLE Employees (
-    emp_id INT,
-    name VARCHAR(50),
-    salary FLOAT CHECK (salary > 0)
-);
-```
-salary속성 자체를  없애고 다시만들어야함
-```sql
-ALTER TABLE Employees
-	DROP COLUMN salary;
-
-ALTER TABLE Employees
-	ADD COLUMN salary FLOAT CHECK (salary >= 50000);
-```
-
-### 생성 CREATE
 #### 기본 테이블 생성
 중괄호는하나무적건잇어야함 대괄호는 생략가능 + 여러번반복될수잇다. * 전체를 선택하는기호
 ```sql
@@ -119,7 +120,7 @@ CREATE TABLE 테이블이름(
 	[CONSTRAINT 이름] [CHECK(조건식)]
 );
 ```
-#### Example
+예시
 ```sql
 CREATE TABLE ENROL (
 	-- 속성들 정의
@@ -134,7 +135,7 @@ CREATE TABLE ENROL (
 	-- 제약조건 
 	CHECK(Grade ³ 0 AND Grade £ 100));
 ```
-
+#### 뷰생성
 
 ### 수정 삭제 DROP ALTER
 #### 테이블,스키마 삭제
@@ -149,6 +150,9 @@ ALTER TABLE 테이블이름
 	DROP 열이름 [조건]
 	ADD 열이름 데이터타입 [DEFAULT 디폴트값] 
 ```
+
+### 삭제 DELETE
+
 ## 데이터 조작어(DML)
 >DB 데이터 관리
 >입력 수정 삭제, 검색
@@ -156,11 +160,87 @@ ALTER TABLE 테이블이름
 ### 검색 SELECT
 ```sql
 --[]시 먼저 나오는게 디폴트 값
-SELECT [ALL | DISTINCT] 열_리스트 
+--DISTINCT : 중복제거
+SELECT [ALL | DISTINCT] 속성 
 	FROM 테이블_리스트 [WHERE 조건]
 	[GROUP BY 열_리스트 [HAVING 조건]]
 	[ORDER BY 열_리스트 [ASC | DESC]];
 ```
+
+#### JOIN을 이용한 검색
+```sql
+SELECT Sname, Dept, Grade 
+	FROM STUDENT 
+	JOIN ENROL 
+	ON (STUDENT.Sno=ENROL.Sno) 
+	WHERE ENROL.Cno = 'C413'; 
+
+SELECT Sname, Dept, Grade
+	FROM STUDENT 
+	JOIN ENROL 
+	USING(Sno) 
+	WHERE ENROL.Cno = 'C413';
+	
+SELECT Sname, Dept, Grade 
+	FROM STUDENT 
+	NATURAL JOIN ENROL 
+	WHERE ENROL.Cno = 'C413';
+```
+- ON은 조인할때의 기준을 정의할 때 사용한다
+- USING은 조인할때 두테이블의 컬럼명(속성명)이 같을때 사용
+- NATURAL JOIN은 두 테이블에 둘 다 존재하는 속성을 dbms에서 자동으로 찾아서 알아서 조인해줌
+- https://doh-an.tistory.com/30
+
+#### UNION을 이용한 검색
+#### 집계함수 
+- COUNT, SUM, AVG, MAX, MIN
+- 집계함수(속성) 형식
+- as 써서 반환 이름 변경 가능
+  ![[Pasted image 20231216170306.png|500]]
+```sql
+SELECT COUNT(*) AS 학생수 FROM STUDENT;
+SELECT COUNT(DISTINCT Cno) FROM ENROL WHERE Sno = 300;
+SELECT AVG(Midterm) AS 중간평균 FROM ENROL WHERE Cno = ‘C413’;
+```
+#### 부속 질의어 (서브쿼리)
+##### 질의 결과가 하나인 경우
+```sql
+SELECT Sname, Dept 
+FROM STUDENT 
+WHERE Dept = 
+	(SELECT Dept FROM STUDENT WHERE Sname = ‘정기태’);
+```
+바로 비교해도됨.
+
+##### 질의 결과가 여러개
+|   |   |
+|-----|---|
+|다중 행 연산자|설명|
+|IN|서브쿼리의 결과에 해당 값이 존재하는지. NOT IN|
+|ALL|서브쿼리의 결과랑 비교연산자 했을때 모든값이 만족하나 |
+|ANY|서브쿼리의 결과랑 비교연산자 했을때 하나의 값이라도 만족하나.|
+|EXISTS|서브쿼리의 결과를 만족하는 값이 존재하는지 여부를 확인하는 조건을 의미한다 NOT EXIST|
+```sql
+-- in  앞에 비교대상
+SELECT Sname FROM STUDENT WHERE Sno IN 
+	(SELECT Sno FROM ENROL WHERE Cno = 'C413');
+SELECT Sname FROM STUDENT WHERE Sno NOT IN 
+	(SELECT Sno FROM ENROL WHERE Cno = ‘C413’);
+
+-- all 앞에 연산자와 비교대상
+SELECT Sno, Cno FROM ENROL WHERE Final > ALL 
+	(SELECT Final FROM ENROL WHERE Sno = 500);
+
+--any 앞에 연산자랑 비교대상
+SELECT column_name(s) FROM table_name WHERE column_name > ANY 
+	(SELECT column_name FROM table_name WHERE condition);
+
+-- exist 앞에 머없음
+SELECT Sname FROM STUDENT WHERE EXISTS 
+	(SELECT * FROM ENROL WHERE Sno = STUDENT.Sno AND Cno = 'C413');
+```
+
+### 갱신 UPDATE & 삽입 INSERT
 
 ## 데이터 제어어(DCL)
 >DB 관리 및 통제
