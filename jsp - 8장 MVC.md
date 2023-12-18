@@ -1,7 +1,13 @@
+>MVC 패턴,  MVC 패턴구조
+>서블릿에서 클라이언트 요청 처리 방법
+>서블릿에서 입력값 핸들링 방법
+>서블릿에서 뷰 이동 방법
+>실습 8.2
+
 ## 패턴
 - 추상팩토리 패턴
 	- 상위 객체에서 객체를 추상화하고 하위 클래스에서 구체적인 구현을 담당하는 것
-- MVC
+- ==MVC==
 	- 모델 뷰 컨트롤러
 		- 모델 : 데이터 처리 영역
 			- DAO: Data Access Object 데이터베이스 연동 클래스
@@ -26,7 +32,7 @@
 	- jsp에서의 mvp
 	  ![[Pasted image 20231218223409.png|300]]
 
-## 서블릿에서 컨트롤러 설계
+## ==서블릿에서 컨트롤러 설계==
 기능에 따른 컨트롤러 설계
 ### 클라이언트 요청처리
 - 처리 방법 :   단일 컨트롤러 vs 개별 컨트롤러 
@@ -171,8 +177,112 @@ public String getMemberInfo(int id, Model model) {
 
 
 
-## 실습
+## ==실습==
 
-뷰 : productList.jsp, productInfo.jsp
-모델 : Product.java, ProductService.java
-컨트롤러 : Product.java, ProductService.java
+##### 뷰 : productList.jsp, productInfo.jsp
+```jsp
+<!--productList.jsp -->
+<c: forEach var="p" varStatus="i" items="§{products}">
+	<tr>
+		<td>${i.count}</td>
+		<td>
+			<!--url 파라미터 이용-->
+			<a href="/jwbook/pcontrol?action=info&id=${p.id}">${p.name}</a>
+		</td>
+		<td>${p.price}</td>
+	</tr>
+</c:forEach>
+
+<!--productInfo.jsp -->
+<ul>
+	<1i>상품코드: ${p.id}</l1>
+	<1i>상품명: ${p.name}</l1>
+	<1i>제조사: ${p.maker}</l1>
+	<1i>가격: ${p.price}</l1>
+	<1i>등록일: ${p.date}</l1>
+</ul>
+```
+##### 모델 : Product.java, ProductService.java
+```java
+/* Product 클래스 : 상품 정보를 표현하기 위한 DO 객체*/
+public class Product {
+	private String id;
+	private String name;
+	private String maker;
+	private int price;
+	private String date;
+	//생성자함수
+	//getter setter 함수
+}
+
+/* ProductService 클래스 : 데이터 베이스 없이 샘플데이터를 제공하는 글래스 */
+public class ProductService {
+	Map<String, Product> products = new HashMap<>();
+
+	//데이터 집어넣는 메서드
+	public ProductService() {
+		Product p = new Product("101", "애플사과폰 12", "애플전자", 1200000, "2020.12.12");
+		products. put ("101", p);
+		
+		p= new Product("102","삼전우주폰 21","삼전전자", 1300000, "2021.2.2"):
+		products.put ("102", p);
+		
+		p = new Product("103", "앨스듀얼폰", "앨스전자", 1500000,"2021.3.2");
+		products. put ("103", p);
+	}
+	//제품리스트 호출 메서드
+	public List<Product> findAlI() {
+		return new ArrayList<>(products.values());
+	}
+
+	//id로 제품을 찾는 메서드
+	public Product find(String id) {
+		return products.get(id);
+	｝
+｝
+```
+##### 컨트롤러 : ProductController.java
+```java
+@WebServlet(" /pcontrol")
+public class ProductController extends HttpServlet {
+	ProductService service;
+	
+	public ProductController() {
+		//설정한 데이터 불러오기
+		service = new ProductService();
+	}
+	@Override
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	
+		//파라미터를 받아옴
+		String action = request.getParameter("action");
+		String view = "";
+
+		//파라미터에 따른 행동 구분
+		if(action == null) {
+				//없을경우 파라미터를 넣어서 포워딩.
+				getServletContext().getRequestDispatcher("/pcontrol?action=list").forward(request, response);
+		} else {
+			switch(action) {
+				case "list": 
+					view = list(request, response); break;
+				case "info": 
+					view = info(request, response); break;
+			}
+			//지정한 요청파라미터와  페이지를 디스페처로 전달
+			getServletContext().getRequestDispatcher("/ch08/"+view). forward(request, response);
+		}
+	}
+
+	//요청 파라미터에 속성과 데이터를 넣고 페이지를 반환.
+	private String info(HttpServletRequest request, HttpServletResponse response) {
+		request.setAttribute("p", service.find(request.getParameter ("id")));
+		return "productInfo.jsp";
+	}
+	private String list (HttpServletRequest request, HttpServletResponse response) {
+		request setAttribute("products", service.findAll());
+		return "productList.jsp";
+	}
+}
+/**/
+```
