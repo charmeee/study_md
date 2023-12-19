@@ -34,3 +34,20 @@
 
 - "사용자 요청"에 따라 서블릿이나 Jsp가 "실행전"에 response,request 객체의 조작이나 추가적인 처리가능
 - 보통 특정 요청에만 동작, 정해진 순서에 따라 동작
+- @WebFilter("url 매핑정보")
+- 여러개 필터를 순서대로 적용하기
+	- 'web.xml'에 필터 등록해야함
+	  이경우에는 @WebFilter(filterName="filterOne")
+	  ![[Pasted image 20231219101229.png|400]]
+
+### 동작 구조
+![[Pasted image 20231219100911.png|400]]
+init : 초기화 작업
+doFilter : 해당 필터가 적용되었을 때의 
+	ServletRequest나 ServletResponse을 가로채 필요한 작업을 수행
+destory : 필터가 종료될 때의 작업
+### 활용상황
+- 인증
+- 로깅
+- 국제화
+- 한글 인코딩 처리
