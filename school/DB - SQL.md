@@ -370,7 +370,10 @@ EXEC SQL DECLARE C1 CURSOR FOR /*커서 C1의 정의*/
 	 WHERE Dept = :dept; 
 EXEC SQL OPEN C1; /*질의문의 실행*/ 
 	DO /* C1으로 접근되는 모든 레코드에 대해 */ 
-		EXEC SQL FETCH C1 INTO :sno,:sname,:year; /*다음 레코드를 채취*/ . . . . . . END; 
+		EXEC SQL FETCH C1 INTO :sno,:sname,:year; /*다음 레코드를 채취*/
+		 . . . . . .
+		 
+	END; 
 EXEC SQL CLOSE C1; /*커서 c1의 활동 종료 *
 ```
 
