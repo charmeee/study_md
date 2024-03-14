@@ -5,3 +5,5 @@ https://pitching-gap.tistory.com/entry/Flutter-Go-Router%EB%A5%BC-%EC%9D%B4%EC%9
 
 with riverpod auth
 https://medium.com/@madhanrkv10/authentication-using-gorouter-with-riverpod-state-management-bac9313f2afe
+이게좋은듯!!
+https://github.com/lucavenir/go_router_riverpod/blob/master/example/lib/state/auth_controller.dart
