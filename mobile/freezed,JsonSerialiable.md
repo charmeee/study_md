@@ -1,3 +1,11 @@
+```sh
+flutter pub run build_runner build
+
+flutter pub run build_runner watch
+```
+
+
+
 custom
 https://medium.com/@hasimyerlikaya/flutter-custom-datetime-serialization-with-jsonconverter-5f57f93d537
 
