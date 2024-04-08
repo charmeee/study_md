@@ -4,3 +4,5 @@ https://nx006.tistory.com/69
 
 https://stackoverflow.com/questions/77277048/problem-using-riverpod-code-generation-in-dart-addlistener
 
+코드 제너레이션
+https://nx006.tistory.com/69
