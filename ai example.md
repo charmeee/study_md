@@ -1,7 +1,8 @@
 
 그림
 https://www.midjourney.com/home
-이디오그램
+https://ideogram.ai/
+https://deepai.org/machine-learning-model/text2img
 
 공식문서학습후 코드생성
 https://revf.tistory.com/295
