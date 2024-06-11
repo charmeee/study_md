@@ -32,3 +32,9 @@ vcat.ai
 
 ui
 https://creatie.ai/
+https://www.youtube.com/watch?v=QQ24H1v3Dy8
+https://www.youtube.com/watch?v=BdRD_cSdL44
+figma - wiregen
+Relume AI
+디자인테마..
+뉴오피즘
