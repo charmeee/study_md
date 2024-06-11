@@ -18,3 +18,4 @@ gpt 확장 툴
 superpower
 aiprm
 
+https://www.youtube.com/watch?v=nYnhzaVChMc
