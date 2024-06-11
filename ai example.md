@@ -20,7 +20,7 @@ aiprm
 
 3d ai 위주
 https://www.youtube.com/watch?v=nYnhzaVChMc
-
+https://www.youtube.com/watch?v=eaef8Tr7uRo
 
 html 뽑아내기
 makereal
