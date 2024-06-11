@@ -9,7 +9,8 @@ https://revf.tistory.com/295
 영상요약
 lilys ai
 
-
+heygen
+목소리 다른언어로 변환
 ppt
 https://slidesgo.com/ko/
 
