@@ -18,4 +18,9 @@ gpt 확장 툴
 superpower
 aiprm
 
+3d ai 위주
 https://www.youtube.com/watch?v=nYnhzaVChMc
+
+
+html 뽑아내기
+makereal
