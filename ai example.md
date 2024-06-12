@@ -37,6 +37,10 @@ https://www.youtube.com/watch?v=BdRD_cSdL44
 figma - wiregen
 Relume AI
 https://www.youtube.com/watch?v=i9t8gdaBsTg&t=0s
+
+ 3d 모델링
+https://spline.design/
+
 디자인테마..
 뉴오피즘
 
