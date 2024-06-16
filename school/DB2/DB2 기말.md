@@ -24,10 +24,37 @@
 - 필드이름
 - 부모테이블
 - 라벨
+	- 최종 사용자 에플리케이션 인터페이스 내에서 필드를 식별하는 다른이름임
+	- 일반적으로 더 짧음
+	- 화면 공간상의 문제나 사람들이 더 익숙할때에 사용
+	- 라벨을 공식적인 필드 이름으로 사용하면 안됨
+		- 잘못 해석하거나 부정확하게 식별할 수 있음
 - 명세 종류(Specification type)
+	- 유일(Unique)
+		- 외래키를 사용하는 필드 외에 일반적인 기본 명세
+		- 
+	- 일반(generic)
+	- 복제(replica)
 - 원본 명세(Source Specification)
 - 공유(Shared By)
 - 별칭(Alias)
 - 설명(Description)
 ## 물리적 요소
+- 데이터형
+- 길이
+- 소수점 위치(Decimal Place)
+- 문자 지원(Character Support)
+- 입력 마스크(Input Mask)
+- 디스플레이 형식
 ## 논리적 요소
+- 키 종류
+- 키 구조
+- 유일성(Uniqueness)
+- 널 지원
+- 값 입력자(Values Entered By)
+- 필요 값(Required Value)
+- 기본 값(Default Value)
+- 값 범위
+- 편집 규칙
+- 허용 비교
+- 허용 연산
