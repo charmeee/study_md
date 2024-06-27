@@ -138,6 +138,8 @@ filters
 v-어쩌구 형태인
 v-bind : 동적바인딩
 v-on :이벤트감
+v-if
+v-else
 ## 라우터
 
 ```js
