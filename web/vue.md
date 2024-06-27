@@ -32,7 +32,7 @@ let vm = new Vue({
 ### 컴포넌트 생성
 ```js
 // 전역 컴포넌트로 등록
-Vue.component.component(
+Vue.component(
 	'app-header',
 	{
 		template: '<h1></h1>'
