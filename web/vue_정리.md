@@ -131,6 +131,11 @@ new Vue({
 var router = new VueRouter({
 
 })
+new Vue({
+	el: '#app',
+	router,
+	
+})
 ```
 
 
