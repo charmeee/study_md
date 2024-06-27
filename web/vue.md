@@ -15,11 +15,15 @@ data = react의 state같은거
 ### 인스턴스 생성
 ```
 let vm = new Vue({
-	el: "#app",
+	el: "#app", //인스턴스 그려지는 시작점
 	data : {
 		message : "hi"
-	}
-})  // 관습적으로 vm사용 %%
+	},
+	template:,// 화면에 표시할 요소
+	methods:, 화면의 동작과 이벤트 로직을 제어하는 메서드
+	created:,// lifecycles관련 속성
+	watch: , 	//data정의 속성 변화햇을때 추가동작 (useEffect같은거군.)
+})  // 관습적으로 vm사용 
 ```
 
 ## React와 차이점, 같은점
