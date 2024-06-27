@@ -1,4 +1,7 @@
 
+
+
+
 MVVM 패턴
 ![300](assets/vue-20240627101400036.png)
 가상돔 이동
@@ -59,3 +62,10 @@ new Vue({
 장단점
 
 https://velog.io/@injoon2019/%EB%AA%85%EB%A0%B9%ED%98%95-vs-%EC%84%A0%EC%96%B8%ED%98%95-%ED%95%A8%EC%88%98%ED%98%95
+
+
+
+
+>https://gymcoding.notion.site/acf439e5e4b04e079104439153a7f223
+>https://joshua1988.github.io/vue-camp/
+>+ 검색자료
