@@ -114,7 +114,7 @@ new Vue({
 <tag v-on:pass="logText" />
 
 //단축문법
-v-on:pass
+<tag @[pass]="logText" />
 ```
 
 ## 라우
