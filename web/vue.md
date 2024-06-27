@@ -26,6 +26,7 @@ let vm = new Vue({
 	methods:, 화면의 동작과 이벤트 로직을 제어하는 메서드
 	created:,// lifecycles관련 속성
 	watch: , 	//data정의 속성 변화햇을때 추가동작 (useEffect같은거군.)
+	components:,//지역컴포넌트 등록
 })  // 관습적으로 vm사용 
 ```
 
