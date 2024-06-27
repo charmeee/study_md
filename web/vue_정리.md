@@ -59,10 +59,11 @@ new Vue({
 #### props 전달
 동적 할당
 ```js 
-<tag  v-bind:프롭스 속성이름 = "속성값"/>
+<tag  v-bind:propsname = "속성값"/>
 
-var appHeader = {
-	template:'h1
+var tag  = {
+	template: '<h1>tag</h1>',
+	props : ['propsname']
 }
 ```
 
