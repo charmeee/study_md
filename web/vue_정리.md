@@ -115,6 +115,11 @@ new Vue({
 
 //단축문법
 <tag @[pass]="logText" />
+
+//계산식 사용불가
+<a :['foo' + bar]="value>... </a>//makes error
+
+
 ```
 
 ## 라우
