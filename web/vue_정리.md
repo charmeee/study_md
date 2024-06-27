@@ -79,9 +79,12 @@ new Vue({
 //여러개
 data:{
 	objectOfAttrs:{
-	id: 'con'
+		id: 'con',
+		class:'wrapper'
 	}
 }
+<div v-bind="objectOfAttrs"></div>
+
 ```
 
 #### 이벤트
