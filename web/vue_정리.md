@@ -120,6 +120,10 @@ new Vue({
 <a :['foo' + bar]="value>... </a>//makes error
 //computed 사용해야
 
+//수식어
+ event.preventDefault 사용대신
+ <a @click.prevent="handler"/> 이렇게 사용가능
+
 ```
 
 ## 라우
