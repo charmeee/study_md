@@ -16,7 +16,7 @@ Object.defineProperty
 data = react의 state같은거
 변화를 감지해서 화면에 렌더링함
 ### 인스턴스 생성
-```
+```JS
 let vm = new Vue({
 	el: "#app", //인스턴스 그려지는 시작점
 	data : {
