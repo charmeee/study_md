@@ -58,8 +58,12 @@ new Vue({
 ### 속성 문법
 #### props 전달
 동적 할당
-```js
+```js 
 <tag  v-bind:프롭스 속성이름 = "속성값"/>
+
+var appHeader = {
+	template:'h1
+}
 ```
 
 ## React와 차이점, 같은점
