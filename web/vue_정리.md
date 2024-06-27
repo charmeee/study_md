@@ -59,7 +59,7 @@ new Vue({
 #### props 전달
 동적 할당
 ```
-<tag  v-bind:속/>
+<tag  v-bind:프롭스 속성이름 = "속성값"/>
 ```
 
 ## React와 차이점, 같은점
