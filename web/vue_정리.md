@@ -130,14 +130,14 @@ new Vue({
 ## 템플릿 문법
 ### 데이터바인딩
 methods :  화면의 동작과 이벤트 로직을 제어하는 메서드
-computed : data정의 속성 변화햇을때 추가동작 (useEffect같은거군.)
-watch
+computed : 반복되고 단순계산을 실행할때 . (data값을 변경시키면안됨.)
+watch : data정의 속성 변화햇을때 추가동작 (useEffect같은거군.)
 filters
 
 ### 디렉티브
 v-어쩌구 형태인
 v-bind : 동적바인딩
-v-on :이벤트감
+v-on :이벤트감지
 v-if:값 : 참일시실행
 v-else : 값이 거짓일시 실
 v-show : 돔에 항상보여줌 거짓일시 CSS display 속성을 none으로
