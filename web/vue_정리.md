@@ -118,7 +118,7 @@ new Vue({
 
 //계산식 사용불가
 <a :['foo' + bar]="value>... </a>//makes error
-
+//computed 사용해야
 
 ```
 
