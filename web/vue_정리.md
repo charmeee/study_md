@@ -139,6 +139,9 @@ new Vue({
 	router,
 	
 })
+
+<div id="app"
+> 
 //verson 3
 createApp(App) .use(router) .mount('#app')
  const router = createRouter({ history: createMemoryHistory(), routes, })
