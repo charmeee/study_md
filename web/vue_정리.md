@@ -92,8 +92,13 @@ data:{
 //click
 var tag  = {
 	template: '<button v-on:click>click me</button>',
-	props : ['propsname']
 }
+new Vue({
+	el :"#app",
+	components : {
+		'tag' : tag
+	},
+})
 ```
 ## React와 차이점, 같은점
 
