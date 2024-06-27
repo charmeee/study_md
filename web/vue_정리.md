@@ -65,6 +65,12 @@ var tag  = {
 	template: '<h1>tag</h1>',
 	props : ['propsname']
 }
+new Vue({
+	el :"#app",
+	components : {
+		'tag' : tag
+	}
+})
 ```
 
 ## React와 차이점, 같은점
