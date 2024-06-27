@@ -112,7 +112,13 @@ new Vue({
 })
 //tag태그에서 pass이벤트가 발생시  logText함수실행
 <tag v-on:pass="logText" />
+
+//단축문법
+v-on:pass
 ```
+
+## 라우
+
 ## React와 차이점, 같은점
 
 데이터흐름 양방향 vs 단방향
