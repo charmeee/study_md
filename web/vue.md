@@ -28,7 +28,8 @@ let vm = new Vue({
 	watch: , 	//data정의 속성 변화햇을때 추가동작 (useEffect같은거군.)
 	components:,//지역컴포넌트 등록
 })  // 관습적으로 vm사용 
-```
+```'
+
 
 ### 컴포넌트 생성
 ```js
