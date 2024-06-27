@@ -127,7 +127,9 @@ new Vue({
 ```
 
 ## 라우터
+#### 생
 ```js
+//verson 2
 var router = new VueRouter({
 
 })
@@ -136,6 +138,8 @@ new Vue({
 	router,
 	
 })
+//verson 3
+createApp(App) .use(router) .mount('#app')
 ```
 
 
