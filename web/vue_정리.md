@@ -60,7 +60,8 @@ new Vue({
 동적 할당
 ```js 
 <tag  v-bind:propsname = "속성값"/>
-
+<tag  :propsname = "속성값"/>
+//위에 두개는 같다.
 var tag  = {
 	template: '<h1>tag</h1>',
 	props : ['propsname']
