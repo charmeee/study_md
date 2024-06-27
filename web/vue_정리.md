@@ -94,7 +94,7 @@ var tag  = {
 	template: '<button v-on:click="passEvent">click me</button>',
 	methods : {
 		pathEvent: function(){
-		this.$emit('pass');
+			this.$emit('pass');
 		}
 	}
 }
