@@ -154,6 +154,9 @@ createApp(App) .use(router) .mount('#app')
 
 router-links 는 걍 리액트의 link랑 같네염^^
 
+
+## 비동기
+### js의 비
 ## React와 차이점, 같은점
 
 데이터흐름 양방향 vs 단방향
