@@ -75,6 +75,13 @@ new Vue({
 		varname:'varval'
 	}
 })
+
+//여러개
+data:{
+	objectOfAttrs:{
+	id: 'con'
+	}
+}
 ```
 
 #### 이벤트
