@@ -13,7 +13,18 @@ Object.defineProperty
 data = react의 state같은거
 변화를 감지해서 화면에 렌더링함
 ### 인스턴스 생성
-new Vue()
+```
+let vm = new Vue({
+	el: "#app",
+	data : {
+		message : "hi"
+	}
+})  // 관습적으로 vm사용 %%
+```
 
+## React와 차이점, 같은점
 
-## React와 차이점
+데이터흐름 양방향 vs 단방향
+장단점
+
+https://velog.io/@injoon2019/%EB%AA%85%EB%A0%B9%ED%98%95-vs-%EC%84%A0%EC%96%B8%ED%98%95-%ED%95%A8%EC%88%98%ED%98%95
