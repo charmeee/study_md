@@ -103,6 +103,11 @@ new Vue({
 	components : {
 		'tag' : tag
 	},
+	methods:{
+		logText: function(){
+			console.log('hi')
+		}
+	}
 })
 
 <tag v-on:하위컴포넌트에서 발생한 이벤트 이>
