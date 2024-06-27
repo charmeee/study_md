@@ -156,7 +156,11 @@ router-links 는 걍 리액트의 link랑 같네염^^
 
 
 ## 비동기
-### js의 비
+### js의 비동기 처리 패턴변화
+1. callback
+2. promise
+3. promise + generator
+4. async & await
 ## React와 차이점, 같은점
 
 데이터흐름 양방향 vs 단방향
