@@ -141,6 +141,7 @@ new Vue({
 })
 
 <div id="app">
+	<router-link>
 	<router-view>
 	</router-view>
 </div>
