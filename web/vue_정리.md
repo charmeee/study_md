@@ -77,7 +77,7 @@ new Vue({
 ```js
 //click
 var tag  = {
-	template: '<button>click me</button>',
+	template: '<button v-on:click>click me</button>',
 	props : ['propsname']
 }
 ```
