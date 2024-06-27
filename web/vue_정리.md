@@ -129,8 +129,13 @@ new Vue({
 
 ## 템플릿 문법
 ### 데이터바인딩
+methods
+computed
+watch
+filters
 
 ### 디렉티브
+v-어쩌구 형태인
 ## 라우터
 
 ```js
