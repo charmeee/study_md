@@ -129,9 +129,10 @@ new Vue({
 ## 라우터
 #### 생
 ```js
+const routes = [ { path: '/', component: HomeView }, { path: '/about', component: AboutView }, ] 
 //verson 2
 var router = new VueRouter({
-
+	routes,
 })
 new Vue({
 	el: '#app',
@@ -140,6 +141,8 @@ new Vue({
 })
 //verson 3
 createApp(App) .use(router) .mount('#app')
+ const router = createRouter({ history: createMemoryHistory(), routes, })
+
 ```
 
 
