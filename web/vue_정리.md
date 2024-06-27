@@ -140,8 +140,10 @@ new Vue({
 	
 })
 
-<div id="app"
-> 
+<div id="app">
+	<router-view>
+	</router-view>
+</div>
 //verson 3
 createApp(App) .use(router) .mount('#app')
  const router = createRouter({ history: createMemoryHistory(), routes, })
