@@ -29,6 +29,16 @@ let vm = new Vue({
 })  // 관습적으로 vm사용 
 ```
 
+### 컴포넌트 생성
+```js
+// 전역 컴포넌트로 등록
+Vue.component.component(
+	'app-header',
+	{
+		template: '<h1></h1>'
+	}
+)
+```
 ## React와 차이점, 같은점
 
 데이터흐름 양방향 vs 단방향
