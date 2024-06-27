@@ -127,6 +127,11 @@ new Vue({
 ```
 
 ## 라우터
+```js
+var router = new VueRouter({
+
+})
+```
 
 
 ## React와 차이점, 같은점
