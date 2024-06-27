@@ -9,11 +9,11 @@ MVVM 패턴
 Object.defineProperty
 오..님천재임? 
 즉시실행함수를 이용하여 스코프 관리
-```
-
-```
-
 ## 기본 문법
+data = react의 state같은거
+변화를 감지해서 화면에 렌더링함
+### 인스턴스 생성
+new Vue()
 
 
 ## React와 차이점
