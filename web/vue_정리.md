@@ -59,7 +59,7 @@ new Vue({
 #### props 전달
 동적 할당
 ```js 
-<tag  v-bind:propsname = "속성값"/>
+<tag  v-bind:propsname = "변수이"/>
 <tag  :propsname = "속성값"/>
 //위에 두개는 같다.
 var tag  = {
