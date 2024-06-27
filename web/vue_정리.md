@@ -109,7 +109,7 @@ new Vue({
 		}
 	}
 })
-//tag태그에서 pass이벤트가 발생시  logTe
+//tag태그에서 pass이벤트가 발생시  logText함수실행
 <tag v-on:pass="logText" />
 ```
 ## React와 차이점, 같은점
