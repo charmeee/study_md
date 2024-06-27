@@ -23,7 +23,7 @@ let vm = new Vue({
 		message : "hi"
 	},
 	template:,// 화면에 표시할 요소
-	methods:, 화면의 동작과 이벤트 로직을 제어하는 메서드
+	methods:,// 화면의 동작과 이벤트 로직을 제어하는 메서드
 	created:,// lifecycles관련 속성
 	watch: , 	//data정의 속성 변화햇을때 추가동작 (useEffect같은거군.)
 	components:,//지역컴포넌트 등록
@@ -129,8 +129,8 @@ new Vue({
 
 ## 템플릿 문법
 ### 데이터바인딩
-methods
-computed
+methods :  화면의 동작과 이벤트 로직을 제어하는 메서드
+computed : data정의 속성 변화햇을때 추가동작 (useEffect같은거군.)
 watch
 filters
 
