@@ -91,7 +91,11 @@ data:{
 ```js
 //click
 var tag  = {
-	template: '<button v-on:click>click me</button>',
+	template: '<button v-on:click="passEvent">click me</button>',
+	methods : {
+		pathEvent: function(){
+		}
+	}
 }
 new Vue({
 	el :"#app",
