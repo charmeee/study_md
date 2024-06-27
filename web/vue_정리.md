@@ -74,8 +74,12 @@ new Vue({
 ```
 
 #### 이벤트
-```
-ㅊ
+```js
+//click
+var tag  = {
+	template: '<button>click me</button>',
+	props : ['propsname']
+}
 ```
 ## React와 차이점, 같은점
 
