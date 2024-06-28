@@ -97,7 +97,7 @@ export default {
 </script>
 ```
 
-#### script setup의 장점
+#### script setup의 장점 및 차이
 (vue 공식 문서에 따르면...)
 - 더 적은 상용구로 더 간결한 코드
 - 순수 TypeScript를 사용하여 props 및 내보낼(emit) 이벤트를 선언하는 기능
@@ -107,6 +107,8 @@ export default {
 
 > 내가생각한 단점..
 > 무조건 변수나 함수가 최상위 바인딩이 되는데  이에 따른 단점이 있을꺼 같음..
+
+
 ## 통신(props emit)
 ```vue
 <script setup>
