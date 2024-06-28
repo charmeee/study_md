@@ -48,11 +48,10 @@ new Vue({
 	}
 })
 
-//랜더함수 이용
+//랜더함수 이용 (루트 컴포넌)
 new Vue({
 	render : h=> h(App)
 }).$mount('#app);
-		
 		  
 new Vue({
 	el :"#app",
