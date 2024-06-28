@@ -108,6 +108,9 @@ export default {
 > 내가생각한 단점..
 > 무조건 변수나 함수가 최상위 바인딩이 되는데  이에 따른 단점이 있을꺼 같음..
 
+script <-> script setup
+script : 모듈범위에서 한번만 실행
+script setup : 각 인스턴스 생성시 setup
 
 ## 통신(props emit)
 ```vue
