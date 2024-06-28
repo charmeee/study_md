@@ -56,6 +56,12 @@ onMounted(() => {
 
 `<script setup>`이부분은 아래와 같이 선언해도됨
 
-```vue title
-dd
+```vue
+<script>
+import { ref, onMounted } from 'vue'
+
+setup(){
+const
+}
+</script>
 ```
