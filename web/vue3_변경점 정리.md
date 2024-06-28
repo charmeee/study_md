@@ -1,6 +1,7 @@
 
 ## options vs composition API
-option는
+option는 데이터의속성 실행시점등과같이 나눴다면
+composition은 관심사별로 분리를 가능캐한다.
 
 ### options
 ```vue
