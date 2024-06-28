@@ -135,6 +135,7 @@ data > ref(원시) , reactive(객체)
 readonly option을 통해 특정 부분에서 객체 변경 방지 가능
 ### Lifecycle
 onMounted(), onUnmounted()
+![300](Pasted%20image%2020240628175728.png)
 ### DI
 provide() inject()
 provide(key,value) inject(key) : return value
@@ -173,3 +174,5 @@ provide('location', {
 ```
 
 provide값넣을때 readonly로 감싸면 일기만 가능^&^
+
+대규모일때는 key를 symbol로 사용하기도
