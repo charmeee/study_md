@@ -25,7 +25,8 @@ let vm = new Vue({
 	},
 	template:,// 화면에 표시할 요소
 	methods:,// 화면의 동작과 이벤트 로직을 제어하는 메서드
-	created:,// lifecycles관련 속성
+	created:,// 마운트전.virtual dom사용 못함. 데이터초기화
+	mounte
 	watch: , 	//data정의 속성 변화햇을때 추가동작 (useEffect같은거군.)
 	components:,//지역컴포넌트 등록
 })  // 관습적으로 vm사용 
