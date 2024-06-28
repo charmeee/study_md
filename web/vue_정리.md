@@ -63,7 +63,7 @@ new Vue({
 <tag  v-bind:propsname = "varname"/>
 <tag  :propsname = "varname"/>
 <tag :name = "{varname : boolean}" /> // 참일때만 varname 
-//cumputed가 더나음
+//cumputed가 더나음 
 //위에 두개는 같다.
 var tag  = {
 	template: '<h1>tag</h1>',
