@@ -37,6 +37,8 @@ export default {
 <script setup>
 import { ref, onMounted } from 'vue'
 
+//toplevel 에서 비동기 사용가능 > 자동으로 async로컴파
+
 // 반응적인 상태의 속성
 const count = ref(0)
 
@@ -76,7 +78,8 @@ export default{
 </script>
 ```
 
-#### props emit 이
+#### 함께사용도 가능함.
+
 #### script setup의 장점
 (vue 공식 문서에 따르면...)
 - 더 적은 상용구로 더 간결한 코드
