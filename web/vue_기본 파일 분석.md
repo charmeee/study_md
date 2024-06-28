@@ -14,5 +14,8 @@ var appHeader = {
 
 ### vue 확장자에서의 코드
 ```
-<
+<template>
+	<div>header</div>
+</template>
+
 ```
