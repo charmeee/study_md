@@ -1,5 +1,5 @@
 
-## Composition Api 가 먼가..
+## 개념과 등장이유
 option는 데이터의속성 실행시점등과같이 나눴다면
 composition은 관심사별로 분리를 가능캐한다.
 좀더 함수형스러운듯?
@@ -75,4 +75,5 @@ export default{
 </script>
 ```
 
-## c
+## API 상세
+###
