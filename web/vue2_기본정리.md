@@ -170,6 +170,7 @@ app.component('date-picker', {
 <script> 
 	export default { inheritAttrs: false, };
  </script>
+ <template> <p>Non-Prop 속성: {{ $attrs }}</p> </template>
 ```
 ## 템플릿 문법
 ### 데이터바인딩
