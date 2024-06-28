@@ -198,8 +198,8 @@ npm init vue@latest
 //위의 두개의 명령어는 같다.
 ```
 
-### 차이(현재 vs 과거)
-- vite vs webpack
+### 과거 vs 현재
+- webpack vs vite 
 - 다양한 플러그인 지원 vs 오직 단순한 스캐풍딩도구(나머진 vite 한테 위임)
 ## React와 차이점, 같은점
 
