@@ -183,9 +183,14 @@ router-links 는 걍 리액트의 link랑 같네염^^
 3. promise + generator
 4. async & await
 
-## vue 설정
+## vue 세팅
 
 ### 과거
+cli 이용하여 세팅
+```
+vue init 
+vue create
+```
 
 ## React와 차이점, 같은점
 
