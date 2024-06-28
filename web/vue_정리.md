@@ -195,7 +195,11 @@ vue create
 ```
 npm create vue@latest
 npm init vue@latest
+//위의 두개의 명령어는 같다.
 ```
+
+### 차이
+
 ## React와 차이점, 같은점
 
 데이터흐름 양방향 vs 단방향
