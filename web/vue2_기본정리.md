@@ -173,7 +173,13 @@ v-on :이벤트감지
 v-if:값 : 참일시실행
 v-else : 값이 거짓일시 실
 v-else-if : elseif
-v-for : qksqhr
+v-for : 반복문
+```vue
+<li v-for="(item, index) in items" :key="item.id">
+  {{ item.message }}
+</li> 
+```
+
 v-show : 돔에 항상보여줌 거짓일시 CSS display 속성을 none으로
 v-model : input 값을 할당함, `v-bind`와 `v-on`의 기능의 조합임
 ## 라우터
