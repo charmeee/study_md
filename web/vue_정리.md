@@ -183,7 +183,10 @@ router-links 는 걍 리액트의 link랑 같네염^^
 3. promise + generator
 4. async & await
 
-## vue cli
+## vue 설정
+
+### 과거
+
 ## React와 차이점, 같은점
 
 데이터흐름 양방향 vs 단방향
@@ -197,3 +200,6 @@ https://velog.io/@injoon2019/%EB%AA%85%EB%A0%B9%ED%98%95-vs-%EC%84%A0%EC%96%B8%E
 >https://gymcoding.notion.site/acf439e5e4b04e079104439153a7f223
 >https://joshua1988.github.io/vue-camp/
 >+ 검색자료
+
+
+
