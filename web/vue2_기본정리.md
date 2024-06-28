@@ -157,6 +157,7 @@ watch : data정의 속성 변화햇을때 추가동작 (useEffect같은거군.�
 filters :
 created : lifecycles관련 속성
 
+스타일을동적 바인딩할때 배열객체로도 받을 수 있다.
 ### 디렉티브
 v-어쩌구 형태인
 v-bind : 동적바인딩
