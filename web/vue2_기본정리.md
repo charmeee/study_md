@@ -16,7 +16,7 @@ Object.defineProperty
 data = react의 state같은거
 변화를 감지해서 화면에 렌더링함
 ### 인스턴스 생성
-##### Options API
+
 ```JS
 let vm = new Vue({
 	el: "#app", //인스턴스 그려지는 시작점
@@ -30,10 +30,10 @@ let vm = new Vue({
 	components:,//지역컴포넌트 등록
 })  // 관습적으로 vm사용 
 ```
-##### Composition API
+
 ### 컴포넌트
 ####  생성
-##### Options API
+
 ```js
 // 전역 컴포넌트로 등록
 Vue.component(
@@ -65,7 +65,7 @@ new Vue({
 ```
 사용할때는 컴포넌트 등록 이름을 이용하여 사용하면 됨
 `<app-header/>` 
-##### Composition API
+
 #### 통신
 ![300](assets/vue_정리-20240627140705844.png)
 리액트랑 같음
