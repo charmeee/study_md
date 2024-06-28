@@ -51,7 +51,15 @@ new Vue({
 //랜더함수 이
 new Vue({
 	render : h=> h(App)
-}).$mount('#)
+}).$mount('#app);
+		  
+new Vue({
+	el :"#app",
+	components : {
+		'컴포넌트 이름' : {컴포넌트 내용}
+	}
+})
+		  
 ```
 사용할때는 컴포넌트 등록 이름을 이용하여 사용하면 됨
 `<app-header/>` 
