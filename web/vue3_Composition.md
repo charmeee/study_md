@@ -32,7 +32,7 @@ export default {
 
 ```
 ### composition
-use <script setup>
+`<script setup>` 이용
 ```vue
 <script setup>
 import { ref, onMounted } from 'vue'
@@ -57,7 +57,7 @@ onMounted(() => {
 
 ```
 
-`<script setup>`이부분은 아래와 같이 선언해도됨
+이용하지 않을시
 
 ```vue
 <script>
@@ -75,6 +75,9 @@ export default{
 }
 </script>
 ```
+
+#### script setup의 장점
+(vue 공식 문서에 따르면...)
 
 ## 통신(props emit)
 ## API 상세
