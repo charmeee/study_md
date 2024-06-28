@@ -63,6 +63,11 @@ import { ref, onMounted } from 'vue'
 export default{
 	setup(){
 		const count = ref(0)
+		// 이어서 코드 작성
+		return {
+			counter,
+			increment
+		}
 	}
 }
 </script>
