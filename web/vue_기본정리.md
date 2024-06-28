@@ -216,6 +216,8 @@ npm init vue@latest
 ### 과거 vs 현재
 - webpack vs vite 
 - 다양한 플러그인 지원 vs 오직 단순한 스캐풍딩도구(나머진 vite 한테 위임)
+
+## Composition Api 와 Options API 차이
 ## React와 차이점, 같은점
 
 데이터흐름 양방향 vs 단방향
