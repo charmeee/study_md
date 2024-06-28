@@ -1,4 +1,7 @@
 
+마운트도 조금다름.
+`createApp(App).mount('#app') 
+ㅖㅏ 걍문법만다름
 ## 개념과 등장이유
 option는 데이터의속성 실행시점등과같이 나눴다면
 composition은 관심사별로 분리를 가능캐한다.
