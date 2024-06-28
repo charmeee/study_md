@@ -155,7 +155,8 @@ watch : data정의 속성 변화햇을때 추가동작 (useEffect같은거군.�
 	인자로 새값, 이전값을 받음
 	데이터패칭 , 디바운싱등..액션을 취함 혹은 돔을 바꿀ㄸ
 watchEffect
-	두개 
+	두개 차이점 : watch는 명시적으로 관찰된 속성 추적
+			watch effect는 동기 실행중 액세스 되는 모든 반응 속성을 자동으로 추적.
 filters :
 created : lifecycles관련 속성
 
