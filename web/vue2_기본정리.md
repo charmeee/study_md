@@ -150,6 +150,7 @@ new Vue({
 methods :  화면의 동작과 이벤트 로직을 제어하는 메서드
 computed : 반복되고 단순계산을 실행할때 . (data값을 변경시키면안됨.)
 	종속 대상을 따라 캐싱
+	getter전
 watch : data정의 속성 변화햇을때 추가동작 (useEffect같은거군.무거운 동작)
 	인자로 새값, 이전값을 받음
 	데이터패칭 , 디바운싱등..
@@ -218,7 +219,7 @@ npm init vue@latest
 - webpack vs vite 
 - 다양한 플러그인 지원 vs 오직 단순한 스캐풍딩도구(나머진 vite 한테 위임)
 
-## Composition Api 와 Options API 차이
+
 ## React와 차이점, 같은점
 
 데이터흐름 양방향 vs 단방향
