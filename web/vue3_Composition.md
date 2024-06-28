@@ -137,4 +137,38 @@ readonly option을 통해 특정 부분에서 객체 변경 방지 가능
 onMounted(), onUnmounted()
 ### DI
 provide() inject()
-광범위한 상태관리 
+광범위한 상태관리 drilling 피함
+```vue
+<!-- 제공자 컴포넌트 내부 -->
+<script setup>
+import { provide, ref } from 'vue'
+
+const location = ref('북극')
+
+function updateLocation() {
+  location.value = '남극'
+}
+
+provide('location', {
+  location,
+  updateLocation
+})
+</script>
+<!-- 제공자 컴포넌트 내부 -->
+<script setup>
+import { provide, ref } from 'vue'
+
+const location = ref('북극')
+
+function updateLocation() {
+  location.value = '남극'
+}
+
+provide('location', {
+  location,
+  updateLocation
+})
+</script>
+```
+
+
