@@ -48,8 +48,10 @@ new Vue({
 	}
 })
 
-//랜더함수 이용
-new Vue
+//랜더함수 이
+new Vue({
+	render : h=> h(App)
+}).$mount('#)
 ```
 사용할때는 컴포넌트 등록 이름을 이용하여 사용하면 됨
 `<app-header/>` 
