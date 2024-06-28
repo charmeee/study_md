@@ -1,3 +1,5 @@
+Single File Component
+확장자가 .vue인 파일
 ### 기존 js 에서의 코드
 ```
 var appHeader = {
