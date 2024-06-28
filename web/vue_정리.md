@@ -198,8 +198,9 @@ npm init vue@latest
 //위의 두개의 명령어는 같다.
 ```
 
-### 차이
-
+### 차이(현재 vs 과거)
+- vite vs webpack
+- 
 ## React와 차이점, 같은점
 
 데이터흐름 양방향 vs 단방향
