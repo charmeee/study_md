@@ -224,6 +224,13 @@ v-slot :  리액트의 chidren
 		<slot></slot> 
 	</button>
 </template>
+
+
+<!---랜더링---->
+<button class="fancy-btn">
+	Click!!
+</button>
+
 ```
 ## 라우터
 
