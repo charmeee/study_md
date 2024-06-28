@@ -4,7 +4,7 @@ MVVM 패턴
 가상돔 이동
 
 ## 주요 개념
-### reactivity. 반응성
+### reactivity 반응성
 데이터 바인딩 감지 > 리액트에도 잇음~
 Object.defineProperty
 오..님천재임? 
@@ -132,7 +132,7 @@ new Vue({
 methods :  화면의 동작과 이벤트 로직을 제어하는 메서드
 computed : 반복되고 단순계산을 실행할때 . (data값을 변경시키면안됨.)
 watch : data정의 속성 변화햇을때 추가동작 (useEffect같은거군. data값 변경시킴)
-filters
+filters :
 
 ### 디렉티브
 v-어쩌구 형태인
