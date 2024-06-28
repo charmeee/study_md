@@ -131,7 +131,7 @@ new Vue({
 <tag @[pass]="logText" />
 
 //계산식 사용불가
-<a :['foo' + bar]="value>... </a>//makes error
+<a :['foo' + bar]="value>...  </a>//makes error
 //computed 사용해야
 
 //수식어
