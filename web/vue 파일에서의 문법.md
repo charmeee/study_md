@@ -7,6 +7,8 @@ var appHeader = {
 		
 		}
 	}
+	data : {
+	}
 }
 ```
 
@@ -22,6 +24,7 @@ export default {
 		
 		}
 	}
+	data 
 }
 </script>
 <style>
