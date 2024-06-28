@@ -134,7 +134,7 @@ computed : 반복되고 단순계산을 실행할때 . (data값을 변경시키�
 	종속 대상을 따라 캐싱
 watch : data정의 속성 변화햇을때 추가동작 (useEffect같은거군.무거운 동작)
 	인자로 새값, 이전값을 받음
-	데이터패칭 , 디바
+	데이터패칭 , 디바운싱등..
 filters :
 created : lifecycles관련 속성
 
