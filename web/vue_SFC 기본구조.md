@@ -47,4 +47,4 @@ export default {
 function으로 감싼건 스코프를 제한하기 위해서.
 ### template
 템플릭태그의 상위루트 태그는 하나로 묶여야함
-v3에서는 안그래도됨 자체적으로 fragment를
+v3에서는 안그래도됨 자체적으로 fragment를 생성해준다.
