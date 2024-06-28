@@ -1,4 +1,5 @@
-Single File Component
+
+ㅍv3엣선는 Single File Component
 확장자가 .vue인 파일
 ### 기존 js 에서의 코드
 ```
@@ -45,4 +46,5 @@ export default {
 ```
 function으로 감싼건 스코프를 제한하기 위해서.
 ### template
-템플릭태그의 상위루트 태그는 하나로 묶여야함( 리액트랑같음.)
+템플릭태그의 상위루트 태그는 하나로 묶여야함
+v3에서는 안그래도됨 자체적으로 fragment를
