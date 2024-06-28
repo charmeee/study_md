@@ -75,6 +75,7 @@ export default{
 </script>
 ```
 
+## 
 ## API 상세
 https://vuejs.org/api/
 총괄 API 정리도어있음

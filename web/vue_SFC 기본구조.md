@@ -16,7 +16,7 @@ var appHeader = {
 }
 ```
 
-### SFC에서의 코드
+### SFC에서의 코드 << v2
 ```
 <template>
 	<div>
