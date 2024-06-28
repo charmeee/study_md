@@ -9,13 +9,15 @@ var appHeader = {
 	}
 	data : {
 		str: "hi"
-	}
+	},
+	props : [],
 }
 ```
 
 ### vue 확장자에서의 코드
 ```
 <template>
+<div<
 	<div>header</div>
 </template>
 <script>
@@ -29,7 +31,8 @@ export default {
 		return {
 			str: "hi"
 		}
-	}
+	},
+	props : ['propsdata']
 }
 </script>
 <style>
