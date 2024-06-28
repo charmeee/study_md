@@ -1,5 +1,3 @@
-## vue 확장자
-
 ### 기존 js 에서의 코드
 ```
 var appHeader = {
@@ -30,3 +28,6 @@ export default {
 </style>
 
 ```
+
+### template
+템플릭태그의 상위루트 태그는 하나로 묶여야함( 리액트랑같음.)
