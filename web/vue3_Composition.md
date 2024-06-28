@@ -80,8 +80,7 @@ https://vuejs.org/api/
 총괄 API 정리도어있음
 주요한 것을정리.
 ### 반응형(Reactivity)
-comp <-> option 으로 대체해봄
-- ref <> data
-- 
+option <-> comp 으로 대체해봄
+data > ref(dnj)
 ### Lifecycle
 ### DI
