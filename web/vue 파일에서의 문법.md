@@ -8,6 +8,7 @@ var appHeader = {
 		}
 	}
 	data : {
+		str: "hi"
 	}
 }
 ```
@@ -24,7 +25,11 @@ export default {
 		
 		}
 	}
-	data 
+	data : function(){
+		return {
+			str: "hi"
+		}
+	}
 }
 </script>
 <style>
