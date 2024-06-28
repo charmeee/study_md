@@ -5,7 +5,7 @@ MVVM 패턴
 
 ## 주요 개념
 ### reactivity 반응성
-데이터 바인딩 감지 > 리액트에도 잇음~
+데이터 바인딩 감지 
 Object.defineProperty
 오..님천재임? 
 즉시실행함수를 이용하여 스코프 관리
