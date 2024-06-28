@@ -110,7 +110,7 @@ export default {
 
 script <-> script setup
 script : 모듈범위에서 한번만 실행
-script setup : 각 인스턴스 생성시 setup
+script setup : 각 인스턴스 생성시 setup범위 내에서 실
 
 ## 통신(props emit)
 ```vue
