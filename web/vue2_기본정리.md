@@ -213,7 +213,7 @@ v-for : 반복문
 v-show : 돔에 항상보여줌 거짓일시 CSS display 속성을 none으로
 v-model : input 값을 할당함, `v-bind`와 `v-on`의 기능의 조합임
 v-slot :  리액트의 chidren
-```
+```vue
 <FancyButton>
 <!-- 슬롯 콘텐츠 --> Click!! 
 </FancyButton>
@@ -230,7 +230,32 @@ v-slot :  리액트의 chidren
 <button class="fancy-btn">
 	Click!!
 </button>
+```
+- 이름을 부여할 수도 있음
+```vue
+<!-- 부모 컴포넌트 사용 예시 -->
+<template>
+  <BaseCard>
+    <template v-slot:header>제목</template>
+    <template v-slot:default>안녕하세요</template>
+		<template v-slot:footer>푸터</template>
+  </BaseCard>
+</template>
 
+<!-- BaseCard.vue -->
+<template>
+  <article>
+    <div>
+      <slot name="header"></slot>
+    </div>
+    <div>
+      <slot></slot>
+    </div>
+    <div">
+      <slot name="footer"></slot>
+    </div>
+  </article>
+</template>
 ```
 ## 라우터
 
