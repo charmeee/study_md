@@ -135,7 +135,7 @@ data > ref(원시) , reactive(객체)
 readonly option을 통해 특정 부분에서 객체 변경 방지 가능
 ### Lifecycle
 onMounted(), onUnmounted()
-![300](Pasted%20image%2020240628175728.png)
+![400](Pasted%20image%2020240628175728.png)
 ### DI
 provide() inject()
 provide(key,value) inject(key) : return value
