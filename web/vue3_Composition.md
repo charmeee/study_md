@@ -137,3 +137,4 @@ readonly option을 통해 특정 부분에서 객체 변경 방지 가능
 onMounted(), onUnmounted()
 ### DI
 provide() inject()
+광범위한 상태관리 
