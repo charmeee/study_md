@@ -80,8 +80,7 @@ https://vuejs.org/api/
 총괄 API 정리도어있음
 주요한 것을정리.
 ### 반응형(Reactivity)
-option <-> comp 으로 대체해봄
 data > ref(원시) , reactive(객체)
-readonly option을 통해 특정 부분에서 객체 벼
+readonly option을 통해 특정 부분에서 객체 변경 방지 가능
 ### Lifecycle
 ### DI
