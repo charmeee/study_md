@@ -1,5 +1,6 @@
 
 ## options vs composition API
+option는
 
 ### options
 ```vue
