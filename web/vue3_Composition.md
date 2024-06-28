@@ -137,6 +137,7 @@ readonly option을 통해 특정 부분에서 객체 변경 방지 가능
 onMounted(), onUnmounted()
 ### DI
 provide() inject()
+provide(key,value) inject() : return value
 광범위한 상태관리 drilling 피함
 ```vue
 <!-- 제공자 컴포넌트 내부 -->
