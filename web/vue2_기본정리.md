@@ -145,7 +145,25 @@ new Vue({
 ```
 
 #### 속성 병합
-자식 컴포넌트는 부모컴포
+바로 아래의 
+```
+ㅍ```
+app.component('date-picker', {
+  template: `
+    <div class="date-picker">
+      <input type="datetime">
+    </div>
+  `
+})
+
+<!-- non-prop 속성과 Date-picker 컴포넌트 -->
+<date-picker data-status="activated"></date-picker>
+
+<!-- 렌더링된 date-picker 컴포넌트 -->
+<div class="date-picker" data-status="activated">
+  <input type="datetime">
+</div>
+```
 ## 템플릿 문법
 ### 데이터바인딩
 methods :  화면의 동작과 이벤트 로직을 제어하는 메서드
