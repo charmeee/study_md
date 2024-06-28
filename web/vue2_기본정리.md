@@ -182,7 +182,7 @@ v-for : 반복문
 
 v-show : 돔에 항상보여줌 거짓일시 CSS display 속성을 none으로
 v-model : input 값을 할당함, `v-bind`와 `v-on`의 기능의 조합임
-v-slot :  > #
+v-slot :  > # 받을 인자의 범위를 표
 ## 라우터
 
 ```js
