@@ -62,6 +62,7 @@ new Vue({
 ```js 
 <tag  v-bind:propsname = "varname"/>
 <tag  :propsname = "varname"/>
+<tag :name = "{}"
 //위에 두개는 같다.
 var tag  = {
 	template: '<h1>tag</h1>',
