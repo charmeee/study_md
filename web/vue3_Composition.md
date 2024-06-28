@@ -82,5 +82,6 @@ https://vuejs.org/api/
 ### 반응형(Reactivity)
 option <-> comp 으로 대체해봄
 data > ref(원시) , reactive(객체)
+readonly option을 통해 특정 부분에서 객체 벼
 ### Lifecycle
 ### DI
