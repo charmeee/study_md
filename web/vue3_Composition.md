@@ -37,7 +37,7 @@ export default {
 <script setup>
 import { ref, onMounted } from 'vue'
 
-//toplevel 에서 비동기 사용가능 > 자동으로 async로컴파
+//toplevel 에서 비동기 사용가능 > 자동으로 async로컴파일
 
 // 반응적인 상태의 속성
 const count = ref(0)
@@ -79,6 +79,23 @@ export default{
 ```
 
 #### 함께사용도 가능함.
+상속옵션을 끄던가 커스텀할때 script를 함께선언
+```
+<script>
+// 일반 스크립트, 모듈 범위에서 한 번만 실행
+runSideEffectOnce()
+
+// 옵션 선언
+export default {
+  inheritAttrs: false,
+  customOptions: {}
+}
+</script>
+
+<script setup>
+// 각 인스턴스 생성시 setup() 범위에서 실행
+</script>
+```
 
 #### script setup의 장점
 (vue 공식 문서에 따르면...)
