@@ -32,6 +32,7 @@ export default {
 
 ```
 ### composition
+use <script setup>
 ```vue
 <script setup>
 import { ref, onMounted } from 'vue'
