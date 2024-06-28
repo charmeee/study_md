@@ -60,8 +60,10 @@ onMounted(() => {
 <script>
 import { ref, onMounted } from 'vue'
 
-setup(){
-const
+export default{
+	setup(){
+		const count = ref(0)
+	}
 }
 </script>
 ```
