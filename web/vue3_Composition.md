@@ -88,6 +88,16 @@ export default{
 > 내가생각한 단점..
 > 무조건 변수나 함수가 최상위 바인딩이 되는데  이에 따른 단점이 있을꺼 같음..
 ## 통신(props emit)
+```vue
+<script setup>
+const props = defineProps({
+  foo: String
+})
+
+const emit = defineEmits(['change', 'delete'])
+// ... setup 코드
+</script>
+```
 ## API 상세
 https://vuejs.org/api/
 총괄 API 정리도어있음
