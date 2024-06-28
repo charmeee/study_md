@@ -144,10 +144,9 @@ new Vue({
 
 ```
 
-#### 속성 병합
-바로 아래의 
+#### 속성 상속
+해당 컴포넌트의 루트 컴포넌트에게 속성이 상속됨 이미 있을 경우 병합
 ```
-ㅍ```
 app.component('date-picker', {
   template: `
     <div class="date-picker">
