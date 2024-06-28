@@ -3,6 +3,16 @@
 ### 기존 js 에서의 코드
 ```
 var appHeader = {
-	template: '<div>hea</div>'
+	template : '<div>header</div>',
+	methods : {
+		addNum : function(){
+		
+		}
+	}
 }
+```
+
+### vue 확장자에서의 코드
+```
+<
 ```
