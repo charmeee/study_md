@@ -81,6 +81,6 @@ https://vuejs.org/api/
 주요한 것을정리.
 ### 반응형(Reactivity)
 option <-> comp 으로 대체해봄
-data > ref(dnj)
+data > ref(원시) , reactive(객체)
 ### Lifecycle
 ### DI
