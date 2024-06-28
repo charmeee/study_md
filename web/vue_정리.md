@@ -191,7 +191,10 @@ cli 이용하여 세팅
 vue init 
 vue create
 ```
-
+### 현재 (vue v3)
+```
+npm create vue@version
+```
 ## React와 차이점, 같은점
 
 데이터흐름 양방향 vs 단방향
