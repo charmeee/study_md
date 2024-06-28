@@ -193,7 +193,8 @@ vue create
 ```
 ### 현재 (vue v3)
 ```
-npm create vue@version
+npm create vue@latest
+npm init vue@latest
 ```
 ## React와 차이점, 같은점
 
