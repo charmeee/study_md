@@ -231,14 +231,14 @@ v-slot :  리액트의 chidren
 	Click!!
 </button>
 ```
-- 이름을 부여할 수도 있음
+- 이름을 부여할 수도 있음 default는 태글ㄹ 생략가능
 ```vue
 <!-- 부모 컴포넌트 사용 예시 -->
 <template>
   <BaseCard>
     <template v-slot:header>제목</template>
     <template v-slot:default>안녕하세요</template>
-		<template v-slot:footer>푸터</template>
+	<template v-slot:footer>푸터</template>
   </BaseCard>
 </template>
 
