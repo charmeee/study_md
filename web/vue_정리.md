@@ -163,8 +163,7 @@ new Vue({
 <div id="app">
 	<router-link></router-link>
 	<router-link></router-link>
-	<router-view>
-	</router-view>
+	<router-view></router-view>
 </div>
 //verson 3
 createApp(App) .use(router) .mount('#app')
