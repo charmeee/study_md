@@ -158,6 +158,14 @@ filters :
 created : lifecycles관련 속성
 
 스타일을동적 바인딩할때 배열객체로도 받을 수 있다.
+
+```html
+<div :style="{ color: activeColor, fontSize: fontSize + 'px' }"></div>
+
+<div :style="[baseStyles, overridingStyles]"></div>
+
+```
+
 ### 디렉티브
 v-어쩌구 형태인
 v-bind : 동적바인딩
