@@ -17,8 +17,10 @@ var appHeader = {
 ### vue 확장자에서의 코드
 ```
 <template>
-<div<
-	<div>header</div>
+	<div>
+		<div>header</div>
+		<div>{{propsdata}}</div>
+	</div>
 </template>
 <script>
 export default {
