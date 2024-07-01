@@ -9,6 +9,8 @@ option는 데이터의속성 실행시점등과같이 나눴다면
 composition은 관심사별로 분리를 가능캐한다.
 좀더 함수형스러운듯?
 
+script setup
+혹은 export에 setup어쩌구 에만 있을 수 있음
 ### options
 ```vue
 <script>
