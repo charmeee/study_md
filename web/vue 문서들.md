@@ -12,3 +12,7 @@ https://joshua1988.github.io/vue-camp/
 
 공식 v3예제
 https://v3-docs.vuejs-korea.org/examples/#hello-world
+
+뷰 사용 예제
+https://github.com/mutoe/vue3-realworld-example-app/blob/master/src/components/ArticleDetailComment.spec.ts
+TESTCODE까지 있음
