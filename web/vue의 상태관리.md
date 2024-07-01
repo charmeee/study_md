@@ -18,7 +18,7 @@ Therefore Flux패턴 두두둥
 state : 여러 컴포넌트에 공유되는 데이터
 getter : 연산된 state값을 접근하는 속성
 mutation : state값을 변경하는 이벤트 로직
-action : 비동기처리로직을 선언한ㄴ 메서ㅔ
+action : 비동기처리로직을 선언하는 메서드
 
 
 ## pinia
