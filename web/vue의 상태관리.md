@@ -9,6 +9,8 @@
 - pinia는 서버사이드 렌더링 지원
 
 ## pinia
-
+### store
+- 정의 : defineStore
+- 사용 : useStore
 
 ## vuex
