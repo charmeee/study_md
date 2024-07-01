@@ -13,11 +13,11 @@
 ### FLUX
 MVC패턴에서 모델과 뷰가 서로 양방향으로 영향을 받다보니
 예측하기가 어려워짐 
-Therefore Flux패턴 두두둥
-단방향구
+Therefore Flux패턴 두두둥장
+단방향
 state : 여러 컴포넌트에 공유되는 데이터
 `this.$store.state.message`
-`this.$store.g`
+`this.$store.getters.[method]`
 getter : 연산된 state값을 접근하는 속성
 mutation : state값을 변경하는 이벤트 로직
 action : 비동기처리로직을 선언하는 메서
