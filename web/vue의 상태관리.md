@@ -36,7 +36,7 @@ export const useCounterStore = defineStore('counter', () => {
   function increment() {
     count.value++
   }
-// ref > state , computed > getter 
+// ref > state , computed > getter, function() > action
   return { count, name, doubleCount, increment }
 })
 ```
