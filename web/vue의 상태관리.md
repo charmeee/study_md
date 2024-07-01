@@ -28,7 +28,17 @@ export const useCounterStore = defineStore('counter', {
   },
 })
 
-// composition api(with )
+// composition api
+export const useCounterStore = defineStore('counter', () => {
+  const count = ref(0)
+  const name = ref('Eduardo')
+  const doubleCount = computed(() => count.value * 2)
+  function increment() {
+    count.value++
+  }
+// ref > state , computed > getter 
+  return { count, name, doubleCount, increment }
+})
 ```
 
 ## vuex
