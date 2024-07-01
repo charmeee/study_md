@@ -9,7 +9,7 @@
 - pinia는 서버사이드 렌더링 지원
 
 ## vuex
-
+대충 들었을 때는 리덕스랑 비슷한 느낌인
 
 ## pinia
 https://pinia.vuejs.org
