@@ -9,9 +9,10 @@
 - pinia는 서버사이드 렌더링 지원
 
 ## pinia
-option api, composition api 둘다 사용 가능함. 후술은 
-### store
+https://pinia.vuejs.org
+option api, composition api 둘다 사용 가능함. 
 - 정의 : defineStore
 - 사용 : useStore
+~~~
 
 ## vuex
