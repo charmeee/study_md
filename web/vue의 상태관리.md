@@ -13,6 +13,22 @@ https://pinia.vuejs.org
 option api, composition api 둘다 사용 가능함. 
 - 정의 : defineStore
 - 사용 : useStore
-~~~
+
+```js
+// optional api
+export const useCounterStore = defineStore('counter', {
+  state: () => ({ count: 0, name: 'Eduardo' }),
+  getters: {
+    doubleCount: (state) => state.count * 2,
+  },
+  actions: {
+    increment() {
+      this.count++
+    },
+  },
+})
+
+// composition api(with )
+```
 
 ## vuex
