@@ -9,7 +9,9 @@
 - pinia는 서버사이드 렌더링 지원
 
 ## vuex
-대충 들었을 때는 리덕스랑 비슷한 느낌인
+리액트의 리덕스라고할수이따(리덕스도 FLUX패턴)
+### FLUX
+
 
 ## pinia
 https://pinia.vuejs.org
