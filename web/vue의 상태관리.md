@@ -6,3 +6,4 @@
 - pinia는 이전 버전인 vue2버전에서도 잘 작동함
 - vuex는 actions, mutations, state 로 구성된 flux패턴
 - pinia는 여기서 mutation이 빠졌음.
+- pin
