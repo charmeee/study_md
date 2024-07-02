@@ -3,7 +3,7 @@
 리액트의 상태관리와 머가다른가!!
 어떤값이든 가능하다
 값으로 다 가능하다
-단! 값이 object일때 reactive가 호
+단! 값이 원시값이 아니면 reactive로 전환된다.
 ### react
 ```js
 let [num1,setNum1]=useState(1)
@@ -50,3 +50,6 @@ watch(num1,(value)=>{
 ![](Pasted%20image%2020240702135910.png)
 참조된 변수가 업데이트 되지 않는다.
 업데이트를 위해서는 watch 나 computed를 사용해야 한다.
+
+## reactive
+반응형 프록시
