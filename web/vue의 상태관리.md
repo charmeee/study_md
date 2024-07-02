@@ -21,6 +21,9 @@ Therefore Flux패턴 두두둥장
 - getter : 연산된 state값을 접근하는 속성
 	- 접근 방법 :  `this.$store.getters.[method]`
 - mutation : state값을 변경하는 이벤트 로직
+	- 접근 방법 : `this.$st`
+	- 사용이유
+		- 사실 걍 state값에 접근해도 됨.
 - action : 비동기처리로직을 선언하는 메서
 
 
