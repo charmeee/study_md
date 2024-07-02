@@ -30,7 +30,7 @@ Therefore Flux패턴 두두둥장
 		- devtool에서 관찰가능
 		- 이후에사실 없어짐ㅎ,ㅎ,ㅎ,ㅎㅎ\
 - action : 비동기처리로직을 선언하는 메서드
-	- 
+	- 접근 방법 : `this.$store.dispatch(함수 명)`
 
 
 ## pinia
