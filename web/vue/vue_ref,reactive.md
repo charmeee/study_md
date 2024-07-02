@@ -33,7 +33,7 @@ const num4 = computed(() => {
 //IF YOU WANT TO USE WATCH
 const num5 = ref(0);
 watch(num1,(value)=>{
-	num5.value = num1.
+	num5.value = num1.value**6
 })
 
 //html부분
