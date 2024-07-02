@@ -85,8 +85,8 @@ option api, composition api 둘다 사용 가능함.
 export const useCounterStore = defineStore('counter', {
   state: () => ({ count: 0, name: 'Eduardo' }),
   getters: {
-    doubleCount: (state) => state.count * 2,
-	  doubledoubleCount:
+    doubleCount: (state) => state.count * 2,, 
+	  doubledoubleCount:()=> this.doubleCount*2
   },
   actions: {
     increment() {
