@@ -40,3 +40,5 @@ const num4 = computed(() => {
 <button @click="increment">up</button>
 ```
 
+![](Pasted%20image%2020240702135910.png)
+참조된 변수가 업데이트 되지 않는다.
