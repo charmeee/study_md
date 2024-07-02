@@ -2,7 +2,8 @@
 ## ref
 리액트의 상태관리와 머가다른가!!
 어떤값이든 가능하다
- 우리가 일반적으로 = 했을때 참조복사가 일어나는 것들
+값으로 다 가능하다
+단! 값이 object일때 reactive가 호
 ### react
 ```js
 let [num1,setNum1]=useState(1)
