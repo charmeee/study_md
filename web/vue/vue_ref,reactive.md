@@ -19,7 +19,24 @@ function increment(){
 state에 참조된 변수도 update된다.
 
 ### vue
-```
+```js
+//script 부분
+const num1 = ref(1);
+function increment() {
+	num1.value++;
+}
+let num2 = num1.value * 2;
+const num3 = ref(num1.value * 3);
+const num4 = computed(() => {
+	return num1.value * 4;
+});
 
+
+//html부분
+<h2>{{ num1 }}</h2>
+<h2>{{ num2 }}</h2>
+<h2>{{ num3 }}</h2>
+<h2>{{ num4 }}</h2>
+<button @click="increment">up</button>
 ```
 
