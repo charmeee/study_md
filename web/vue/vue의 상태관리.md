@@ -75,7 +75,7 @@ option api, composition api 둘다 사용 가능함.
 	- 사용 : useStore
 - 
 ```js
-//
+// 전역에서 couter로 store에 접근 가능
 
 
 // optional api
