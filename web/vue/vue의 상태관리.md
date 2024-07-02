@@ -67,22 +67,7 @@ computed(){
 
 ## pinia
 https://pinia.vuejs.org
-### 왜 피니아
 
-피니아는 Vue의 스토어 라이브러리로 컴포넌트/페이지 간에 상태를 공유할 수 있습니다. 컴포지션 API에 익숙하다면 간단한 `export const state = reactive({})`로 전역 상태를 공유할 수 있다고 생각할 수 있습니다. 이는 SPA에는 해당되지만 SSR의 경우, **앱이 [보안 취약성](https://vuejs.kr/guide/scaling-up/ssr.html#cross-request-state-pollution)에 노출됩니다.** 그러나 작은 SPA에서도 피니아를 사용하면 많은 이점이 있습니다:
-
-- 테스트 유틸리티
-- 플러그인: 플러그인으로 Pinia 기능 확장
-- JS 사용자를 위한 적절한 TypeScript 지원 또는 **자동 완성**
-- 서버 사이드 렌더링 지원
-- Devtools 지원
-    - 액션, 뮤테이션을 추적하는 타임라인
-    - 사용되는 컴포넌트에서 스토어가 나타남
-    - 타임 트래블 및 더 쉬운 디버깅
-- 핫 모듈 교체 (HMR)
-    - 페이지를 새로고침하지 않고 스토어 수정
-    - 개발 중 기존 상태 유지
-    - 
 option api, composition api 둘다 사용 가능함. 
 
 - 순환 순서 : actions> state > view
@@ -122,3 +107,18 @@ export const useCounterStore = defineStore('counter', () => {
 })
 ```
 
+### 왜 피니아
+
+피니아는 Vue의 스토어 라이브러리로 컴포넌트/페이지 간에 상태를 공유할 수 있습니다. 컴포지션 API에 익숙하다면 간단한 `export const state = reactive({})`로 전역 상태를 공유할 수 있다고 생각할 수 있습니다. 이는 SPA에는 해당되지만 SSR의 경우, **앱이 [보안 취약성](https://vuejs.kr/guide/scaling-up/ssr.html#cross-request-state-pollution)에 노출됩니다.** 그러나 작은 SPA에서도 피니아를 사용하면 많은 이점이 있습니다:
+
+- 테스트 유틸리티
+- 플러그인: 플러그인으로 Pinia 기능 확장
+- JS 사용자를 위한 적절한 TypeScript 지원 또는 **자동 완성**
+- 서버 사이드 렌더링 지원
+- Devtools 지원
+    - 액션, 뮤테이션을 추적하는 타임라인
+    - 사용되는 컴포넌트에서 스토어가 나타남
+    - 타임 트래블 및 더 쉬운 디버깅
+- 핫 모듈 교체 (HMR)
+    - 페이지를 새로고침하지 않고 스토어 수정
+    - 개발 중 기존 상태 유지
