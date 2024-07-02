@@ -16,7 +16,7 @@ MVC패턴에서 모델과 뷰가 서로 양방향으로 영향을 받다보니
 ![400](Pasted%20image%2020240702095610.png)
 Therefore Flux패턴 두두둥장
 단방향
-생각한 순서 action)>mutation> state > view
+생각한 순환 순서 : (action)>mutation> state > view 
 
 - state : 여러 컴포넌트에 공유되는 데이터
 	- 접근 방법 : `this.$store.state.message`
@@ -68,6 +68,7 @@ computed(){
 ## pinia
 https://pinia.vuejs.org
 option api, composition api 둘다 사용 가능함. 
+- 순환 순서 : actions> state > view
 - 정의 : defineStore
 - 사용 : useStore
 
