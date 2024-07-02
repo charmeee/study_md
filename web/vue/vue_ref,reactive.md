@@ -1,9 +1,9 @@
 
 ## ref
 리액트의 상태관리와 머가다른가!!
-어떤값이든 가능하다
-값으로 다 가능하다
-단! 값이 원시값이 아니면 reactive로 전환된다.
+- 어떤값이든 가능하다
+- 단! 값이 원시값이 아니면 reactive로 전환된다.
+- getter, setter
 ### react
 ```js
 let [num1,setNum1]=useState(1)
@@ -53,7 +53,7 @@ watch(num1,(value)=>{
 
 ## reactive
 반응형 프록시
-- 원시값을 넣으면 
+- 원시값을 넣으면 안바뀜 웨
 ```
 
 ```
