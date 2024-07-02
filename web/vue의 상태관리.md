@@ -37,7 +37,8 @@ Therefore Flux패턴 두두둥장
 #### helper
 앞에 map붙이면 됨
 this.$store.어쩌구.변수(함수)명
-을 소ㅑㄴ
+을 this.변수(함수)명
+으로 호출 가능케함
 ```
 computed(){
 	...mapState('num;)
