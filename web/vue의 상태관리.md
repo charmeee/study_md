@@ -25,7 +25,10 @@ Therefore Flux패턴 두두둥장
 	- 접근 방법 : `this.$store.commit("function_name",인자)`
 	- 사용이유
 		- 사실 걍 변경을 위해선 state값에 접근해도 됨.
-		- 어느 컴포넌트에서 해당 state가 
+		- 명시적으로 상태변화수행
+		- 어느 컴포넌트에서 해당 state가 변경되었는지 확인가능
+		- devtool에서 관찰가능
+		- 이후에사실 없어짐ㅎ,ㅎ,ㅎ,ㅎㅎ
 - action : 비동기처리로직을 선언하는 메서
 
 
