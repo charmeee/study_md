@@ -31,8 +31,10 @@ const num4 = computed(() => {
 	return num1.value * 4;
 });
 //IF YOU WANT TO USE WATCH
-const num5 = ref(-)
-
+const num5 = ref(0);
+watch(num1,(value)=>{
+	num5.value = num1.
+})
 
 //html부분
 <h2>{{ num1 }}</h2>
