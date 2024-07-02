@@ -30,6 +30,8 @@ const num3 = ref(num1.value * 3);
 const num4 = computed(() => {
 	return num1.value * 4;
 });
+//IF YOU WANT TO USE WATCH
+const num5 = ref(-)
 
 
 //html부분
