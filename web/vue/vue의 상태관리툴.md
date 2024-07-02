@@ -86,6 +86,7 @@ export const useCounterStore = defineStore('counter', {
   state: () => ({ count: 0, name: 'Eduardo' }),
   getters: {
     doubleCount: (state) => state.count * 2,
+	  doubledoubleCount:
   },
   actions: {
     increment() {
@@ -105,6 +106,8 @@ export const useCounterStore = defineStore('counter', () => {
 // ref > state , computed > getter, function() > action
   return { count, name, doubleCount, increment }
 })
+
+
 ```
 
 ### 왜 피니아
