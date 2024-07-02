@@ -1,6 +1,7 @@
 
 ## ref
 리액트의 상태관리와 머가다른가!!
+원시값
 ### react
 ```js
 let [num1,setNum1]=useState(1)
