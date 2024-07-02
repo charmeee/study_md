@@ -36,15 +36,17 @@ Therefore Flux패턴 두두둥장
 		- 동기 > mutation, 비동기 > action
 #### helper
 앞에 map붙이면 됨
-- 스프레드 연산자를 앞에 붙여야함 Why?
+this.$store.어쩌구.변수(함수)명
+을 소ㅑㄴ
 ```
 computed(){
 	...mapState('num;)
 	//num(){ return this.$store.state.num;}
 }
 
-
 ```
+
+- 스프레드 연산자를 앞에 붙여야함 Why?
 
 
 ## pinia
