@@ -19,9 +19,9 @@ Therefore Flux패턴 두두둥장
 - state : 여러 컴포넌트에 공유되는 데이터
 	- 접근 방법 : `this.$store.state.message`
 - getter : 연산된 state값을 접근하는 속성
-`this.$store.getters.[method]`
-mutation : state값을 변경하는 이벤트 로직
-action : 비동기처리로직을 선언하는 메서
+	- `this.$store.getters.[method]`
+- mutation : state값을 변경하는 이벤트 로직
+- action : 비동기처리로직을 선언하는 메서
 
 
 ## pinia
