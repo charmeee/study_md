@@ -12,10 +12,14 @@ function increment(){
 //html부분
 <h2>{num1}</h2>
 <h2>{num2}</h2>
+<button onClick={increment}>up</button>
   
 ```
 ![](Pasted%20image%2020240702135541.png)
 state에 참조된 변수도 update된다.
 
 ### vue
+```
+
+```
 
