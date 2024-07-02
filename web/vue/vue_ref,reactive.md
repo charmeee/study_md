@@ -4,6 +4,8 @@
 - 어떤값이든 가능하다
 - 단! 값이 원시값이 아니면 reactive로 전환된다.
 - getter, setter를 이용한다
+	- 왜 와이! 
+	- 
 ```JS
 // 실제 구현이 아닌 유사 코드
 const myRef = {
