@@ -71,10 +71,13 @@ option api, composition api 둘다 사용 가능함.
 
 - 순환 순서 : actions> state > view
 - 중앙저장소 : store
-- 정의 : defineStore
-- 사용 : useStore
-
+	- 정의 : defineStore
+	- 사용 : useStore
+- 
 ```js
+//
+
+
 // optional api
 export const useCounterStore = defineStore('counter', {
   state: () => ({ count: 0, name: 'Eduardo' }),
