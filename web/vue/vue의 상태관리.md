@@ -73,7 +73,8 @@ option api, composition api 둘다 사용 가능함.
 - 중앙저장소 : store
 	- 정의 : defineStore
 	- 사용 : useStore
-- 
+- 이건 내생각에는 optional이 더좋은듯
+	- 왜냐면 composition으로 사용하는 큰 이유중에하나가 주제별(도메인별로)
 ```js
 // 전역에서 couter로 store에 접근 가능
 
