@@ -15,6 +15,7 @@ MVC패턴에서 모델과 뷰가 서로 양방향으로 영향을 받다보니
 예측하기가 어려워짐 
 Therefore Flux패턴 두두둥장
 단방향
+
 state : 여러 컴포넌트에 공유되는 데이터
 `this.$store.state.message`
 `this.$store.getters.[method]`
