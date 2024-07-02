@@ -76,4 +76,4 @@ watch(num1,(value)=>{
 ## reactive
 반응형 프록시
 - 원시값을 넣으면 안바뀜 웨?> 프록시니깐^^
-- ref(객체)시 자동으로 이 reactive가 호추
+- ref(객체)시 자동으로 이 reactive가 호출됨
