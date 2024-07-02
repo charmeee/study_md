@@ -39,8 +39,11 @@ Therefore Flux패턴 두두둥장
 - 스프레드 연산자를 앞에 붙여야함 Why?
 ```
 computed(){
-
+	...mapState('num;)
+	//num(){ return this.$store.state.num;}
 }
+
+
 ```
 
 
