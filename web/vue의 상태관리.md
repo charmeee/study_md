@@ -23,7 +23,8 @@ Therefore Flux패턴 두두둥장
 - mutation : state값을 변경하는 이벤트 로직
 	- 접근 방법 : `this.$store.commit("function_name",인자)`
 	- 사용이유
-		- 사실 걍 state값에 접근해도 됨.
+		- 사실 걍 변경을 위해선 state값에 접근해도 됨.
+		- 어느 컴포넌트에서 해당 state가 
 - action : 비동기처리로직을 선언하는 메서
 
 
