@@ -37,7 +37,11 @@ Therefore Flux패턴 두두둥장
 #### helper
 앞에 map붙이면 됨
 - 스프레드 연산자를 앞에 붙여야함 Why?
-- 
+```
+computed(){
+
+}
+```
 
 
 ## pinia
