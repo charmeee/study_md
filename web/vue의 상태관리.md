@@ -51,10 +51,15 @@ computed(){
 	- 안에잇는 변수함수를 바깥으로거내야하니깐
  - 유연한문법
 	 ```js
+	 // 메서드 명 그대로시에 배열로다가 하면됨
 	 ...mapMutations([
 		 'clickBtn',
 		 'addNumber'
 	 ])
+	//하지만 새로운 메서드이름으로 호출하고 싶다.
+	...mapMutations({
+		popupMsg:'clickBtn'
+	})
 	 
 	```
 
