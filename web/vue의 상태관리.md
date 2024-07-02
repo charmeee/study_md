@@ -35,8 +35,7 @@ Therefore Flux패턴 두두둥장
 		- 언제 호출햇는지확인하기위해
 		- 동기 > mutation, 비동기 > action
 #### helper
-- state -> mapState
-- getters -
+앞에 map붙이면 됨
 
 
 ## pinia
