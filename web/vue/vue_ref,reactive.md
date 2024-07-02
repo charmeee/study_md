@@ -42,3 +42,4 @@ const num4 = computed(() => {
 
 ![](Pasted%20image%2020240702135910.png)
 참조된 변수가 업데이트 되지 않는다.
+업데이트를 위해서는 watch 나 computed를 사용해야 한다.
