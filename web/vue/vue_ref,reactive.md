@@ -3,7 +3,21 @@
 리액트의 상태관리와 머가다른가!!
 - 어떤값이든 가능하다
 - 단! 값이 원시값이 아니면 reactive로 전환된다.
-- getter, setter
+- getter, setter를 이용한다
+```JS
+// 실제 구현이 아닌 유사 코드
+const myRef = {
+  _value: 0,
+  get value() {
+    track()
+    return this._value
+  },
+  set value(newValue) {
+    this._value = newValue
+    trigger()
+  }
+}
+```
 ### react
 ```js
 let [num1,setNum1]=useState(1)
