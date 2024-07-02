@@ -31,6 +31,9 @@ Therefore Flux패턴 두두둥장
 		- 이후에사실 없어짐ㅎ,ㅎ,ㅎ,ㅎㅎ\
 - action : 비동기처리로직을 선언하는 메서드
 	- 접근 방법 : `this.$store.dispatch(함수 명)`
+	- 사용이유
+		- 언제 호출햇는지확인하기위해
+		- 동기 > mutation, 비동기 > action
 
 
 ## pinia
