@@ -53,6 +53,7 @@ watch(num1,(value)=>{
 
 ## reactive
 반응형 프록시
+- 원시값을 넣으면 
 ```
 
 ```
