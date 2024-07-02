@@ -39,7 +39,7 @@ Therefore Flux패턴 두두둥장
 this.$store.어쩌구.변수(함수)명
 을 this.변수(함수)명
 으로 호출 가능케함
-```
+```js
 computed(){
 	...mapState('num;)
 	//num(){ return this.$store.state.num;}
@@ -50,8 +50,11 @@ computed(){
 - 스프레드 연산자를 앞에 붙여야함 Why?
 	- 안에잇는 변수함수를 바깥으로거내야하니깐
  - 유연한문법
-	 ```
-	 ㅇㅇㅇ
+	 ```js
+	 ...mapMutations([
+		 'clickBtn',
+		 'addNumber'
+	 ])
 	 
 	```
 
