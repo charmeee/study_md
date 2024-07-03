@@ -1,3 +1,4 @@
+
 ### Vue 2와 Vue 3의 차이점
 
 - **Vue 2**: `defineproperty`를 사용하여 각 속성에 대해 getter와 setter를 정의합니다. 이는 깊은 객체 구조에서 재귀적으로 동작하여 반응성을 제공합니다.
