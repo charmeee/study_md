@@ -25,6 +25,17 @@ hi
 <div id=mj>
 hi
 </div>
+```
+Ex 속성값을 defineProps로 지정
+```
+>> App.vue
+<Hi :id="mj" />
+
+>> Hi.vue
+defineProps({id:String})
+<div>
+hi
+</div>
 
 
 ```
