@@ -32,7 +32,7 @@ Ex 속성값을 defineProps로 지정
 <Hi :id="mj" />
 
 >> Hi.vue
-defineProps({id:String})
+const {id} = defineProps({id:String})
 <div>
 hi
 </div>
