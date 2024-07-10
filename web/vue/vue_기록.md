@@ -67,3 +67,7 @@ const {userTrendData, activeId} = toRefs(props);
 이렇게해줘야한다.
 `상당히 귀찮은걸 ㅎ`
 왜그럴꽈
+
+------
+https://joyhong-91.tistory.com/48
+reactive는재할당시반응형을 잃어버린다.
