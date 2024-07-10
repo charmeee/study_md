@@ -74,3 +74,7 @@ reactive는재할당시반응형을 잃어버린다.
 
 ----
 상위 state를 하위 state를 통해 다시선언할경우 하위 state를 바꿔도 상위 state가 따라서 바껴진다.
+실험하기.
+
+---
+집가서 draggable찾아보기
