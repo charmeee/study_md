@@ -54,4 +54,15 @@ const {userTrendData, activeId} = defineProps({
   activeId: String  
 })
 ```
-이러면 activId
+이러면 activeId의 추적이 안된다.
+
+```
+const props = defineProps({  
+  userTrendData: Object,  
+  activeId: String  
+})  
+  
+const {userTrendData, activeId} = toRefs(props);
+```
+이렇게해줘야한다.
+`상당히 귀찮은걸 ㅎ`
