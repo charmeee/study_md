@@ -66,3 +66,4 @@ const {userTrendData, activeId} = toRefs(props);
 ```
 이렇게해줘야한다.
 `상당히 귀찮은걸 ㅎ`
+왜그럴꽈
