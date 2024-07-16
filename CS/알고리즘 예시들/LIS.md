@@ -47,16 +47,10 @@ int LIS_BS() {
             lis.push_back(arr[i]);
             ret = lis.size() - 1;
         }
-
         //i번째 수에 대해, lis 벡터 내에서 그 수의 위치를 찾는다.
-
         int pos = binary_search(lis, 0, ret, arr[i]);
-
         lis[pos] = arr[i];
-
     }
-
     return ret + 1;
-
 }
 ```
