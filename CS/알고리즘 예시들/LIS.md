@@ -13,22 +13,13 @@ https://namu.wiki/w/%EC%B5%9C%EC%9E%A5%20%EC%A6%9D%EA%B0%80%20%EB%B6%80%EB%B6%84
 void LIS_DP() {
     for (int i = 0; i < n; i++) {
         dp[i] = 1;            //해당 원소에서 끝나는 LIS 길이의 최솟값. 즉, 자기 자신
-
-        for (int j = 0; j <i; j++) {
-
+        for (int j = 0; j < i; j++) {
             //i번째 이전의 모든 원소에 대해, 그 원소에서 끝나는 LIS의 길이를 확인한다.
-
             if (arr[i] > arr[j]) {
-
                 //단, 이는 현재 수가 그 원소보다 클 때만 확인한다.
-
                 dp[i] = max(dp[i], dp[j] + 1);        //dp[j] + 1 : 이전 원소에서 끝나는 LIS에 현재 수를 붙인 새 LIS 길이
-
             }
-
         }
-
     }
-
 }
 ```
