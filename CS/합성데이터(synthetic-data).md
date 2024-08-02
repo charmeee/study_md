@@ -6,4 +6,4 @@ https://www.techtarget.com/searchcio/definition/synthetic-data
 https://www.ibm.com/topics/synthetic-data
 
 
-할루시네이
+할루시네이션
