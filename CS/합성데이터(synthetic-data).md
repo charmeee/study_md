@@ -7,12 +7,9 @@ PPT
 
 러시아 상트페테르부르크에 소재한 스테클로프 수학연구소(Steklov Institute of Mathematics)의 세르게이 I. 니콜렌코(Sergey I. Nikolenko)가 저작한 156쪽에 달하는 이 연구 보고서에서는 합성 데이터를 주제로 한 719개의 논문을 인용했습니다. 니콜렌코는 “합성 데이터는 딥 러닝 개발에 핵심적이다…(그리고) 더욱 많은 사용 사례가 앞으로 계속 나올 것”이라고 결론을 냈습니다.
 
-https://blogs.nvidia.co.kr/blog/what-is-synthetic-data/
-https://aws.amazon.com/ko/what-is/synthetic-data/
-https://eehoeskrap.tistory.com/550
+gan이 무엇인가
+https://m.blog.naver.com/euleekwon/221557899873
 
-https://www.techtarget.com/searchcio/definition/synthetic-data
-https://www.ibm.com/topics/synthetic-data
 
 
 할루시네이션
