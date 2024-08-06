@@ -45,4 +45,4 @@ GAN : 기존데이터를 학습
 gan이 무엇인가
 https://m.blog.naver.com/euleekwon/221557899873
 
-
+https://medium.com/datafabrica/exploring-synthetic-data-use-cases-6114935a54d1
