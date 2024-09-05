@@ -16,3 +16,10 @@ s1.update([4, 5, 6])
 s1.remove(2)
 ```
 교집합 & ,차집합 - , 합집합 |
+
+### heapq
+```python
+import heapq heap = [] heapq.heappush(heap, 50) 
+heap2 = [50 ,10, 20] heapq.heapify(heap2)
+result = heapq.heappop(heap)
+```
