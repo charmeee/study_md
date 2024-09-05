@@ -23,3 +23,10 @@ import heapq heap = [] heapq.heappush(heap, 50)
 heap2 = [50 ,10, 20] heapq.heapify(heap2)
 result = heapq.heappop(heap)
 ```
+
+### join
+조인할때 대상이 str 인지확인해야함
+안그러면조인안됨.
+```python
+ans+=(' '.join(map(str,switches[start:end])))
+```
