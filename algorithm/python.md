@@ -30,3 +30,8 @@ result = heapq.heappop(heap)
 ```python
 ans+=(' '.join(map(str,switches[start:end])))
 ```
+
+### 타입체크
+```python
+if isinstance(x, int):
+```
