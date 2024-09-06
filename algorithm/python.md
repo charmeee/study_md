@@ -96,3 +96,11 @@ arr[2:2] = [3, 4]
 print(arr)  # 출력: [1, 2, 3, 4, 5, 6]
 
 ```
+
+### 문자열
+1. 문자열 치환
+```python
+text = "Hello world, Hello universe"
+new_text = text.replace("Hello", "Hi")
+print(new_text)  # 출력: "Hi world, Hi universe"
+```
