@@ -3,6 +3,15 @@ all any
 
 find 문자열 없어도 에러안나고 -1 뜸
 index 없으면 에러남 
+### 회전
+- 시계방향 90도
+```python
+list(map(list, zip(*array [: : -1 ])))
+```
+- 반시계방향 90도
+```python
+ list(map(list, zip(*array)))[: :-1]
+```
 
 ### set
 ```python
