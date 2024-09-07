@@ -113,3 +113,9 @@ text = "Hello world, Hello universe"
 new_text = text.replace("Hello", "Hi")
 print(new_text)  # 출력: "Hi world, Hi universe"
 ```
+
+2. 앞뒤 패딩 채우기
+
+Python에서 문자열.zfill(길이) 함수를 통해 왼쪽에 0을 채울 수 있습니다.
+
+또한 문자열.rjust(길이, 채울문자), 문자열.ljust(길이, 채울문자) 함수를 통해 왼쪽, 오른쪽을 채울 수 있습니다.
