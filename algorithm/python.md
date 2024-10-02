@@ -28,7 +28,8 @@ s1.remove(2)
 
 ### heapq
 ```python
-import heapq heap = [] 
+import heapq 
+heap = [] 
 heapq.heappush(heap, 50) 
 heap2 = [50 ,10, 20] heapq.heapify(heap2)
 result = heapq.heappop(heap)
