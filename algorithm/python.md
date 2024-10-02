@@ -26,6 +26,12 @@ s1.remove(2)
 ```
 교집합 & ,차집합 - , 합집합 |
 
+### 큐
+```python
+from collections import deque
+queue = deque([4, 5, 6])
+```
+```
 ### heapq
 ```python
 import heapq 
