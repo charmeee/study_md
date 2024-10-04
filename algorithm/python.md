@@ -32,7 +32,7 @@ for문돌릴수는잇음
 from collections import deque
 queue = deque([4, 5, 6])
 ```
-```
+
 ### heapq
 ```python
 import heapq 
@@ -131,3 +131,8 @@ print(new_text)  # 출력: "Hi world, Hi universe"
 Python에서 문자열.zfill(길이) 함수를 통해 왼쪽에 0을 채울 수 있습니다.
 
 또한 문자열.rjust(길이, 채울문자), 문자열.ljust(길이, 채울문자) 함수를 통해 왼쪽, 오른쪽을 채울 수 있습니다.
+
+### 정렬
+```python
+student_tuples.sort(key=lambda x: x[2],reverse={bool})
+```
