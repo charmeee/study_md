@@ -54,6 +54,11 @@ ans+=(' '.join(map(str,switches[start:end])))
 if isinstance(x, int):
 ```
 
+### dictionary
+```python
+for key, value in {'a': 10, 'b': 20, 'c': 30, 'd': 40}.items():
+    print(key, value)
+```
 ## 배열
 파이썬에서 원본 배열(리스트)을 자르려면 슬라이싱 결과를 **원본 리스트에 다시 할당**하거나, **리스트의 일부를 삭제**하는 방법을 사용할 수 있습니다. 슬라이싱은 기본적으로 새로운 리스트를 반환하므로, 이를 원본에 반영하려면 명시적으로 수정해야 합니다.
 
