@@ -41,6 +41,7 @@ function solution(A, B) {
 }
 ```
 #### Right Answer
+걍끝점이랑 시작점이랑 겹치지않는수를 count하면된다.
 ```python
 def solution(A, B):
     N = len(A)
