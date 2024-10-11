@@ -13,6 +13,7 @@ else 암것도하지않음
 전꺼랑 현재꺼랑둘다 표시
 현재꺼만표시
 전꺼만표시
+#### WrongAnswer
 ```js
 function solution(A) {
     let result = A[0] + A[A.length-1]
@@ -34,3 +35,5 @@ function solution(A) {
     return A.length<7? Math.max(result,result+A[A.length-2]):result+A[A.length-2]
 }
 ```
+#### RightAnswer
+특정인덱스의 정답값은 이전 6개의 인덱스의 정답값 + 현재인덱스 값을 더하것임.(마지막은항상방문에해야하기에)
