@@ -43,6 +43,8 @@ function solution(A) {
         let sStart = i-6;
         if(sStart<0) sStart=0;
         let  tmpSl= A.slice(sStart,i)
+        // tmpSl 1일때 0부분만있기에 
+        // 이후에 무조건 0을포함하게되어있음
         A[i] = Math.max(...tmpSl) + A[i]
     }
     return A[A.length-1]
