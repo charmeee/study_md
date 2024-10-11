@@ -37,3 +37,14 @@ function solution(A) {
 ```
 #### RightAnswer
 특정인덱스의 정답값은 이전 6개의 인덱스의 정답값 + 현재인덱스 값을 더하것임.(마지막은항상방문에해야하기에)
+```js
+function solution(A) {
+    for(let i = 1; i<A.length; i++){
+        let sStart = i-6;
+        if(sStart<0) sStart=0;
+        let  tmpSl= A.slice(sStart,i)
+        A[i] = Math.max(...tmpSl) + A[i]
+    }
+    return A[A.length-1]
+}
+```
