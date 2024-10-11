@@ -13,7 +13,7 @@ else 암것도하지않음
 전꺼랑 현재꺼랑둘다 표시
 현재꺼만표시
 전꺼만표시
-```
+```js
 function solution(A) {
     let result = A[0] + A[A.length-1]
     if(A.length<=2){
