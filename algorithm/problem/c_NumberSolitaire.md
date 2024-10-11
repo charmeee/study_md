@@ -1,3 +1,4 @@
+[다이나믹프로그래밍](../theory/다이나믹프로그래밍.md) #모름 
 ### 문제
 https://app.codility.com/c/run/trainingK7P6NV-APJ/
 N 배열
@@ -12,3 +13,24 @@ else 암것도하지않음
 전꺼랑 현재꺼랑둘다 표시
 현재꺼만표시
 전꺼만표시
+```
+function solution(A) {
+    let result = A[0] + A[A.length-1]
+    if(A.length<=2){
+        return result
+    }
+    let term = 0;
+    for(let i = 2 ; i<A.length-1; i++){
+        if(A[i]>A[i-1] && A[i]>A[i]+A[i-1]){
+            term++;
+            if(term<=6){
+                A[i] = A[i];
+                continue;
+            }
+        }
+        term = 0
+        A[i] = Math.max(A[i-1],A[i]+A[i-1])
+    }
+    return A.length<7? Math.max(result,result+A[A.length-2]):result+A[A.length-2]
+}
+```
