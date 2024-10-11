@@ -42,23 +42,6 @@ function solution(A, B) {
 ```
 #### Right Answer
 걍끝점이랑 시작점이랑 겹치지않는수를 count하면된다.
-```python
-def solution(A, B):
-    N = len(A)
-    if N == 0: return 0
-    if N == 1: return 1
-    LINE = []
-    for i in range(N):
-        LINE.append([A[i], B[i]])
-    LINE.sort(key=lambda x: (x[1], x[0]))
-    end_point = LINE[0][1]
-    cnt = 1
-    for i in range(1, N):
-        if end_point < LINE[i][0]:
-            end_point = LINE[i][1]
-            cnt += 1
-    return cnt
-```
 
 ```js
 function solution(A, B) {
@@ -80,3 +63,13 @@ function solution(A, B) {
     return res;
 }
 ```
+시작점기준으로정렬을 안해도된다! 
+
+ex
+1-3
+4-5  끝점 3 > 5
+2-5 안됨
+
+1-3 
+2-5 끝점 겹침 적용ㄴㄴ 3 
+4-5 끝점 3 > 5
