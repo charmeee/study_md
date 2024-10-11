@@ -58,3 +58,24 @@ def solution(A, B):
             cnt += 1
     return cnt
 ```
+
+```js
+function solution(A, B) {
+    const N = A.length;
+    let res = 1;
+
+    if (N <= 1) {
+        return N;
+    }
+
+    let start = 0;
+    for (let i = 1; i < N; i++) {
+        if (B[start] < A[i]) {
+            res++;
+            start = i;
+        }
+    }
+
+    return res;
+}
+```
