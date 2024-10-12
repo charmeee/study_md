@@ -1,3 +1,5 @@
+[비용이있는 최단경로](../theory/비용이있는%20최단경로.md)
+#시간초과 
 ### 문제
 1 > N  두정점 u,v 거처야함
 1 > u > v > N
@@ -33,7 +35,7 @@ for i in range(1,N+1):
 result = min(graph[1][v1] +graph[v1][v2]+graph[v2][N],graph[1][v2] +graph[v2][v1]+graph[v1][N])
 print(result)
 ```
-역시 킹갓 힙으로해야..
+역시 킹갓 힙으로해야..[]
 ```python
 import sys
 import math
