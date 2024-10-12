@@ -6,6 +6,7 @@ $$val(A,S) = |sum{ A[i]*S[i] for i = 0..N−1 }|$$
 ### 답
 
 dp 문제인걸몰랏으면 브루드 포스를햇을거임
+틀렷음. 웨?
 ```
   
 let minRes = Infinity
