@@ -3,6 +3,10 @@ all any
 ```python
 from collections import deque
 import heapq
+heap = []
+heapq.heappush(heap, 50)
+heapq.heapify(heap2)
+result = heapq.heappop(heap)
 import math
 ```
 find 문자열 없어도 에러안나고 -1 뜸
