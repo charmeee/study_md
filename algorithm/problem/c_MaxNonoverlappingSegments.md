@@ -1,4 +1,4 @@
-#greedy #모름 
+[그리디](../theory/그리디.md) #모름 
 ### 문제
 https://app.codility.com/programmers/lessons/16-greedy_algorithms/max_nonoverlapping_segments/
 선분 N개가 한줄에 위치
