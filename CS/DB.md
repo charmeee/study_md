@@ -1,0 +1,1 @@
+https://gywn.net/category/my/
