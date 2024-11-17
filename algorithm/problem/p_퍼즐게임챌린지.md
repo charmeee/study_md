@@ -13,3 +13,34 @@ limit 시간이 정해져있음
 
 ### 답
 이분탐색이용하면 될꺼가튼데?
+문제를 잘못이해햇다 이전꺼전부를푸는게아니라 바로 이전꺼만 풀면되는것엿다.
+```
+function solution(diffs, times, limit) {
+    let start = 0;
+    let end = Math.max(...diffs);
+    let mid;
+    while(start<=end){
+        let time_prev = 0
+        mid = parseInt((start+end)/2)
+        for(let i in diffs){
+            if(diffs[i]<= mid){
+                time_prev += times[i]
+            }else{
+                let wrong = diffs[i]-mid
+                let before = i<1? 0: times[i-1]
+                time_prev += before*wrong + times[i]*(wrong+1)
+            }
+        }
+        console.log(start,end,mid,time_prev,limit)
+        if(time_prev === limit) return mid
+        if(time_prev<limit){
+            end = mid -1;
+        }else{
+            start = mid + 1
+        }
+    }
+    console.log(start,end)
+    return start
+}
+
+```
