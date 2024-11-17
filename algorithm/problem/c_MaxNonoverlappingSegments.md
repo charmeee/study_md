@@ -2,6 +2,7 @@
 ### 문제
 https://app.codility.com/programmers/lessons/16-greedy_algorithms/max_nonoverlapping_segments/
 선분 N개가 한줄에 위치
+이미 end 가 앞인순으로 나열되어있음
 A : 시작 ,B: 끝 ,끝점을 기준으로 정렬
 겹치는 경우 겹치지 않는경우
 A[I] ≤ A[J] ≤ B[I] 또는 A[J] ≤ A[I] ≤ B[J]
