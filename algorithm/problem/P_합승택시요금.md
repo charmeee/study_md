@@ -1,3 +1,4 @@
+[비용이있는 최단경로](../theory/비용이있는%20최단경로.md)
 ### 문제
 https://school.programmers.co.kr/learn/courses/30/lessons/72413
 
