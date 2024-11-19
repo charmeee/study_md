@@ -1,5 +1,9 @@
+
+### 문제
 https://school.programmers.co.kr/learn/courses/30/lessons/250136
 
+### 답
+i guess 재귀로하면 
 ```js
 function solution(land) {
     let ans = 0
