@@ -4,4 +4,4 @@
 # think reactful
 
 ### with ui
-- fddf
+- 여기도 단일 책임 원칙
