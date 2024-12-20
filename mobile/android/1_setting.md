@@ -40,14 +40,23 @@
 	- manifest  : 루트태그
 		- xmlns : xml의 네임스페이스 선언
 		```
-		  <manifest
-		  xmlns:android="http://schemas.android.com/apk/res/android"
+		  <manifestxmlns:android="http://schemas.android.com/apk/res/android"
 		  xmlns:tools="http://schemas.android.com/tools">
 		```
-
-	- `<application android:allowBackup="true" {생략}>` : 앱전체를 대상하는 설정
+	- application : 앱전체를 대상하는 설정
 	  ```
-	  ```
+	  ‹application
+		  android:allowBackup="true"
+		  android:dataExtractionRules="@xml/data_extraction_rules"
+		  android: fullBackupContent="@xml/backup_rules"
+		  android:icon="@mipmap/ic_launcher"
+		  android: label="@string/app_name"
+		  android:roundIcon="@mipmap/ic_launcher_round"
+		  android:supportsRt1="true"
+		  android: theme="@style/Theme.AndroidLab"
+		  tools: targetApi="31">
+		  (... 생략 ...)</application >
+		```
 - kotlin+java
 	- 앱 주요소스 코드 파일들
 - res
