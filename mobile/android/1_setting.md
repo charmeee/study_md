@@ -46,10 +46,8 @@
 		```
 
 	- `<application android:allowBackup="true" {생략}>` : 앱전체를 대상하는 설정
-```
-fk
-```
--
+	  ```
+		```
 - kotlin+java
 	- 앱 주요소스 코드 파일들
 - res
