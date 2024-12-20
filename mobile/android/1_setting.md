@@ -38,13 +38,13 @@
 	- AndriodManifest.xml : 메인 환경설정
 	- manifest  : 루트태그
 		- xmlns : xml의 네임스페이스 선언
-		```
+		```xml
 		  <manifestxmlns:android="http://schemas.android.com/apk/res/android"
 		  xmlns:tools="http://schemas.android.com/tools">
 		```
 	- application : 앱전체를 대상하는 설정
-	  ```
-	  ‹application
+	  ```xml
+	  <application
 		  android:allowBackup="true"
 		  android:dataExtractionRules="@xml/data_extraction_rules"
 		  android: fullBackupContent="@xml/backup_rules"
