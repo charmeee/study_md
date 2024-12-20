@@ -1,3 +1,4 @@
+
 # 프로젝트 생성
 ![](assets/setting-20241219232030173.png)
 - packagename : 앱의 식별값
