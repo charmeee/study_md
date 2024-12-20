@@ -31,7 +31,6 @@
 ![](assets/1_setting-20241221013449422.png)
 
 # 안드로이드스튜디오 기본 폴더구성
-
 ![](assets/1_setting-20241221035822530.png)
 - manifests
 	- 앱의 기본설정들
