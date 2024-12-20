@@ -16,5 +16,7 @@
 
 # 기타 설정
 ### android sdk 
+![](assets/1_setting-20241221011941321.png)
 - 안드로이드 개발하기 위한 툴킷
 - setting > languages&framework > android sdk
+- 
