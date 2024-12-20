@@ -32,3 +32,42 @@
 ![](assets/1_setting-20241221013449422.png)
 
 # 안드로이드스튜디오 기본 폴더구성
+
+![](assets/1_setting-20241221035822530.png)
+- manifests
+	- 앱의 기본설정들
+	- AndriodManifest.xml : 메인 환경설정
+	- `‹manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"> `  : 루트태그
+		- xmlns : xml의 네임스페이스 선언
+	- `<application android:allowBackup="true" {생략}>` : 앱전체를 대상하는 설정
+	- 
+- kotlin+java
+	- 앱 주요소스 코드 파일들
+- res
+	- 리소스파일
+	- drawable : 이미지 백터파일
+	- mipmap : 아이콘 이미지파일(주로 다양한해상도넣음)
+	- value : 일반리소스들
+		- strings.xml: 문자열 리소스
+		- colors.xml: 색상 정의
+		- themes.xml: 앱 테마 스타일
+		- dimens.xml: 크기 값
+		- styles.xml: 커스텀 스타일
+	- xml : 환경설정, 보안, 백업등 env관련파일
+	- 
+- gradle script
+	- gradle : 안드로이드 앱 빌드 도구
+	- build.gradle.kts : 빌드 설정 script
+		- `Project : AndroidLab`
+			- 프로젝트 수준의 빌드 설정
+		- `Module : app`
+			- 모듈(앱) 수준의 빌드 설정
+		- 주요코드
+			- plugin : 플러그인선언
+			- applicationId : 앱식별자설정
+			- compileSdk : 컴파일,빌드 적용할 버전
+			- minSdk, targetSdk : 최소, 타겟 SDK
+			- versionCode, versionName : 버전 코드와 명
+			- compileOptions, kotlinOptions : 개발언어 버전 설정
+			- dependecies : 라이브러리 버전
+
