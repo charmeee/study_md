@@ -17,4 +17,4 @@
 # 기타 설정
 ### android sdk 
 - 안드로이드 개발하기 위한 툴킷
-- setting
+- setting > languages&framework > android sdk
