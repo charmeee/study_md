@@ -27,3 +27,6 @@
 	- 호환성을 테스트하고자 의도적으로 낮출때도 있다.
 - Android Tiramisu Privacy Sandbox Preview
 	- 프라이버시기능을 특히 광고 관련쪽에서 강화한 한 버전이다
+
+### sdk tool
+![](assets/1_setting-20241221013449422.png)
