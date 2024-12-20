@@ -57,8 +57,19 @@
 		  (... 생략 ...)</application >
 		```
 		- @머시기/머시기 : res안에있는  파일(폴더) 안에 있는 값
-		- 
-		
+	- 컴포넌트 등록
+		- activity, service, receiver, provider 태그이용
+		- intent-filter : 인텐트를 설정함
+	```xml
+	  <activity
+		  android:name=".MainActivity"
+		  android:exported="true">
+		<intent-filter>
+			  <action android:name="android.intent.action.MAIN" />
+			  <category android:name="android.intent.category.LAUNCHER" />
+		</intent-filter>
+	</activity>
+	```
 - kotlin+java
 	- 앱 주요소스 코드 파일들
 - res
