@@ -1,4 +1,3 @@
-
 # 프로젝트 생성
 ![|440](assets/setting-20241219232030173.png)
 - packagename : 앱의 식별값
@@ -29,7 +28,7 @@
 	- 프라이버시기능을 특히 광고 관련쪽에서 강화한 한 버전이다
 
 ### sdk tool
-![](assets/1_setting-20241221013449422.png)
+![|699](assets/1_setting-20241221013449422.png)
 
 # 안드로이드스튜디오 기본 폴더구성
 ![|307](assets/1_setting-20241221035822530.png)
@@ -39,7 +38,8 @@
 	- manifest  : 루트태그
 		- xmlns : xml의 네임스페이스 선언
 		```xml
-		  <manifestxmlns:android="http://schemas.android.com/apk/res/android"
+		  <manifest
+		  xmlns:android="http://schemas.android.com/apk/res/android"
 		  xmlns:tools="http://schemas.android.com/tools">
 		```
 	- application : 앱전체를 대상하는 설정
