@@ -266,7 +266,7 @@ SELECT Sno FROM ENROL WHERE Cno = 'C324';
 - COUNT, SUM, AVG, MAX, MIN
 - 집계함수(속성) 형식
 - as 써서 반환 이름 변경 가능
-  ![[Pasted image 20231216170306.png|500]]
+  ![[../../../daily/assets/Pasted image 20231216170306.png|500]]
 ```sql
 SELECT COUNT(*) AS 학생수 FROM STUDENT;
 SELECT COUNT(DISTINCT Cno) FROM ENROL WHERE Sno = 300;

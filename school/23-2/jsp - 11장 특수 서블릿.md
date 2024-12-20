@@ -9,7 +9,7 @@
 생명주기 변화와 해당 스코프의 속성의 변화를 관찰함.
 -> 이벤트 발생 -> 리스너실행
 
-![[Pasted image 20231219094330.png|400]]
+![[../../daily/assets/Pasted image 20231219094330.png|400]]
 ### 활용 상황
 - 초기화 매개변수와 연동
 	- 톰캣이 시작시, 초기화 매개변수를 읽어 특정 개체를 초기화한 후 서블릿이나 jsp에 제공
@@ -28,7 +28,7 @@
 - Session
 	- javax.servlet.http.HttpSessionListener : 생명주기 변화
 	- javax.servlet.http.HttpSessionAttributeListener : 속성 
-![[Pasted image 20231219095311.png|400]]
+![[../../daily/assets/Pasted image 20231219095311.png|400]]
 
 ## 필터
 
@@ -38,10 +38,10 @@
 - 여러개 필터를 순서대로 적용하기
 	- 'web.xml'에 필터 등록해야함
 	  이경우에는 @WebFilter(filterName="filterOne")
-	  ![[Pasted image 20231219101229.png|400]]
+	  ![[../../daily/assets/Pasted image 20231219101229.png|400]]
 
 ### 동작 구조
-![[Pasted image 20231219100911.png|400]]
+![[../../daily/assets/Pasted image 20231219100911.png|400]]
 init : 초기화 작업
 doFilter : 해당 필터가 적용되었을 때의 
 	ServletRequest나 ServletResponse을 가로채 필요한 작업을 수행

@@ -43,7 +43,7 @@ DBMS : 데이터를 효과적으로 관리하고 운영하는 기능을 제공 (
 ### DML
 데이터 조작어
 - SELECT
-	  ![[Pasted image 20231219023443.png]]
+	  ![[../../daily/assets/Pasted image 20231219023443.png]]
 - INSERT
 	- INSERT INTO 테_이(칼럼이름) VALUES(칼럼데이터)
 	- 컬럼에 데이터 추가
@@ -67,7 +67,7 @@ JDBC API이용해 SQL문으로 데이터 조작
 ### 구조
 API : 개발자가 사용해서 코드를 작성하는거
 드라이버 : 회사제공
-![[Pasted image 20231219024244.png|300]]
+![[../../daily/assets/Pasted image 20231219024244.png|300]]
 
 ### 단계
 - JDBC 드라이버 로드
@@ -84,7 +84,7 @@ API : 개발자가 사용해서 코드를 작성하는거
 		- 이친구가 더조음
 		- Statement 상속받기 때문에 Statement메서드 모두사용가능
 		- SQL문을 미리 만들어두고 변수를 따로 입력
-		![[Pasted image 20231219025219.png]]
+		![[../../daily/assets/Pasted image 20231219025219.png]]
 		
 - SQL문 전송
 	- java.sql.Statement
