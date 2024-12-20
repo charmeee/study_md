@@ -54,7 +54,6 @@
 		- dimens.xml: 크기 값
 		- styles.xml: 커스텀 스타일
 	- xml : 환경설정, 보안, 백업등 env관련파일
-	- 
 - gradle script
 	- gradle : 안드로이드 앱 빌드 도구
 	- build.gradle.kts : 빌드 설정 script
