@@ -22,4 +22,8 @@
 ![](assets/1_setting-20241221011941321.png)
 - 안드로이드 개발하기 위한 툴킷
 - setting > languages&framework > android sdk
-- 
+- 개발 sdk는 최근 껄 하는게 좋다고한다.
+	- 최신기기를 타겟팅하면서 하위호환성을 유지할 수 있다.
+	- 호환성을 테스트하고자 의도적으로 낮출때도 있다.
+- Android Tiramisu Privacy Sandbox Preview
+	- 프라이버시기능을 특히 광고 관련쪽에서 강화한 한 버전이다
