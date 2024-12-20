@@ -1,6 +1,5 @@
 # 프로젝트 생성
 ![](assets/setting-20241219232030173.png)
-
 - packagename : 앱의 식별값
 	- 보통 도메인 역순 + ㅐ끝에 프로젝트명
 - build configuration language
