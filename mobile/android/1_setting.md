@@ -1,6 +1,6 @@
 
 # 프로젝트 생성
-![](assets/setting-20241219232030173.png)
+![|440](assets/setting-20241219232030173.png)
 - packagename : 앱의 식별값
 	- 보통 도메인 역순 + ㅐ끝에 프로젝트명
 - build configuration language
@@ -19,7 +19,7 @@
 
 # 기타 설정
 ### android sdk 
-![](assets/1_setting-20241221011941321.png)
+![|549](assets/1_setting-20241221011941321.png)
 - 안드로이드 개발하기 위한 툴킷
 - setting > languages&framework > android sdk
 - 개발 sdk는 최근 껄 하는게 좋다고한다.
