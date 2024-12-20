@@ -45,7 +45,7 @@
 	- application : 앱전체를 대상하는 설정
 	  ```xml
 	  <application
-		  android:allowBackup="true"
+		  android:allowBackup="true" 
 		  android:dataExtractionRules="@xml/data_extraction_rules"
 		  android: fullBackupContent="@xml/backup_rules"
 		  android:icon="@mipmap/ic_launcher"
@@ -56,6 +56,9 @@
 		  tools: targetApi="31">
 		  (... 생략 ...)</application >
 		```
+		- @머시기/머시기 : res안에있는  파일(폴더) 안에 있는 값
+		- 
+		
 - kotlin+java
 	- 앱 주요소스 코드 파일들
 - res
