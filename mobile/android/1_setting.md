@@ -37,10 +37,19 @@
 - manifests
 	- 앱의 기본설정들
 	- AndriodManifest.xml : 메인 환경설정
-	- `‹manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"> `  : 루트태그
+	- manifest  : 루트태그
 		- xmlns : xml의 네임스페이스 선언
+		```
+		  <manifest
+		  xmlns:android="http://schemas.android.com/apk/res/android"
+		  xmlns:tools="http://schemas.android.com/tools">
+		```
+
 	- `<application android:allowBackup="true" {생략}>` : 앱전체를 대상하는 설정
-	- 
+```
+fk
+```
+-
 - kotlin+java
 	- 앱 주요소스 코드 파일들
 - res
