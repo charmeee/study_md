@@ -59,6 +59,8 @@
 		- @머시기/머시기 : res안에있는  파일(폴더) 안에 있는 값
 	- 컴포넌트 등록
 		- activity, service, receiver, provider 태그이용
+		- name 속성에 클래스 이름을 등록
+			- .클래스이름 의 "."은 manifest에 등록한 package경로에 있다는 것
 		- intent-filter : 인텐트를 설정함
 	```xml
 	  <activity
