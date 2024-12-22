@@ -26,6 +26,8 @@
 	- 호환성을 테스트하고자 의도적으로 낮출때도 있다.
 - Android Tiramisu Privacy Sandbox Preview
 	- 프라이버시기능을 특히 광고 관련쪽에서 강화한 한 버전이다
+- minSDK, targetSDK, compileSDK 비교
+	- https://eunoia3jy.tistory.com/226
 
 ### sdk tool
 ![|544](assets/1_setting-20241221013449422.png)
