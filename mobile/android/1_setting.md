@@ -1,5 +1,8 @@
 # 프로젝트 생성
 ![|440](assets/setting-20241219232030173.png)
+
+> 기존 프로젝트에 모듈을 추가하는 방식으로도 앱을 생성가능
+> 안스에서 모듈 == 앱
 - packagename : 앱의 식별값
 	- 보통 도메인 역순 + ㅐ끝에 프로젝트명
 - build configuration language
@@ -15,6 +18,7 @@
 - `compileSdkVersion` :  일반적으로 최신 SDK 버전으로 설정하는 것이 권장됩니다.
 - `targetSdkVersion` : 앱이 테스트된 최신 안드로이드 버전
 - `minSdkVersion` : 앱이 지원하는 가장 낮은 안드로이드 버전
+
 
 # 기타 설정
 ### android sdk 
