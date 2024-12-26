@@ -1,0 +1,12 @@
+
+- polling
+- rollup vite가 내부적으로 rollup함
+- React.js, Next.js
+- Distributed Version Control System
+- 웹접근성과 웹표준
+- tanstack
+- swr
+- jest
+- react testing lib
+- cypess
+- 
